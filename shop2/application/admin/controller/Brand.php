@@ -33,6 +33,13 @@
 				if ($_FILES['brand_img']['tmp_name']){
 					$data['brand_img']=$this -> upload();
 				}
+
+				$validate = validate('brand');
+				if (!$validate -> check($data)){
+					$this -> error( $validate -> getError());
+				}
+
+
 				$add=db('brand')->insert($data);
 				// dump($_FILES);
 				// dump($data);die;
@@ -66,6 +73,15 @@
 
 					$data['brand_img']=$this -> upload();
 				}
+				
+
+				$validate = validate('brand');
+				if (!$validate -> check($data)){
+					$this -> error( $validate -> getError());
+				}
+
+
+
 				$save=db('brand')->update($data);
 				// dump($_FILES);
 				// dump($data);die;

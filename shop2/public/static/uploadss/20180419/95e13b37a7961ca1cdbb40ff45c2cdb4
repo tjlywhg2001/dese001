@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大话女儿国注册送好礼~</title>
+    <style type="text/css">
+        /*css RESET  */
+        body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+        body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+        h1,h2,h3,h4,h5,h6{font-size:100%;}address,cite,dfn,em,var{font-style:normal;}
+        code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+        ul,ol{list-style:none;}
+        a{text-decoration:none;}
+        a:hover{text-decoration:underline;}
+        sup{vertical-align:text-top;}
+        sub{vertical-align:text-bottom;}
+        legend{color:#000;}
+        fieldset,img{border:0;}
+        button,input,select,textarea{font-size:100%;}
+        table{border-collapse:collapse;border-spacing:0;}
+        .clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden}.clearfix{ display:inline-block}
+        *html .clearfix{ height:1%}.clearfix{ display:block}
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-family: "Microsoft YaHei";
+            overflow: hidden;
+        }
+        .wrap{position:relative;margin: auto;}
+        .main{
+            width: 450px;
+            height: 308px;
+            position: absolute;
+            left: 50%;
+            margin-left: -319px;
+            top:50%;
+            margin-top: -204px;
+            background: url("/res/img/general_register_open/window.png") no-repeat;
+            padding-top: 125px;
+            padding-left:65px;
+            padding-right: 65px;
+            color: #ffffff;
+            font-size: 14px;
+            z-index: 10;
+        }
+        .main .close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            display: block;
+            right: 4px;
+            top:5px;
+        }
+        .main .tab{
+            overflow: hidden;
+            zoom:1;
+        }
+        .main .error{
+            height: 32px;
+            line-height: 32px;
+            color: #ff0000;
+        }
+        .main .error p{
+            padding-left: 95px;
+        }
+        .main .tab li{
+            width: 224px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            font-size: 14px;
+            float: left;
+            background:rgba(28,64,111,0.5);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f051932,endColorstr=#7f051932)\2;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .main .tab li.active{
+            background:rgba(54,128,255,0.5);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f186392,endColorstr=#7f186392)\9;
+        }
+        .form-box .field{
+            height: 32px;
+            line-height: 32px;
+            margin-bottom: 10px;
+        }
+        .form-box .field .col-1{
+            width: 75px;
+            float: left;
+            overflow: hidden;
+            background:rgba(101,157,253,0.5);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f186392,endColorstr=#7f186392)\9;
+            padding-left: 20px;
+            text-align: left;
+            color: #d3d3d4;
+        }
+        .form-box .field .col-2{
+            width: 228px;
+            float: left;
+            overflow: hidden;
+            height: 30px;
+            line-height: 30px;
+            background: #ffffff;
+            padding: 0 10px;
+            border:0;
+            margin-right: 10px;
+            box-shadow:1px 0 5px #666 inset;
+        }
+        .form-box .field .col-3{
+            width: 89px;
+            float: left;
+            overflow: hidden;
+            height: 32px;
+            line-height: 32px;
+            color: #d3d3d4;
+            font-size: 12px;
+        }
+        .form-box .btns{
+            margin-top: 15px;
+            height: 100%;
+            overflow: hidden;
+            zoom:1;
+            text-align: center;
+        }
+        .form-box  .other-login{
+            color: #b8965c;
+            vertical-align: middle;
+            line-height: 30px;
+            margin-top: 5px;
+        }
+        .reg.form-box  .other-login{ margin-top: 5px;}
+        .form-box .other-login img{
+            vertical-align: middle;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .form-box .other-login .noLink img{ cursor: default;}
+        .form-box .btn-start{
+            width: 154px;
+            height: 39px;
+            background: url("/res/img/general_register_open/btn.png") 0 0;
+            border: 0 none;
+            outline: none;
+            text-indent: -1000px;
+            overflow: hidden;
+            cursor: pointer;
+            margin: auto;
+            display: inline-block;
+
+        }
+
+        .flash{
+            width: 100%;height: 100%; position:absolute; top: 0px; left:auto; right:auto; bottom:0px; text-align: center;
+        }
+        .flashbox{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top:0px;
+            right: 0px;
+            bottom:0px;
+            background:url(about:blank) ;
+            z-index: 2;
+        }
+        .forget{text-align: left}
+        .forget a{ line-height: 32px; color:#fff}
+
+        /*2017-09-15*/
+        /*2017-09-15*/
+        .game-start{
+            text-align: center;
+            padding-top:50px;
+
+        }
+        .game-start .p1{
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        .game-start .btn-start{
+            width: 154px;
+            height: 39px;
+            background: url("/res/img/general_register_open/btn.png") 0 0;
+            border: 0 none;
+            outline: none;
+            text-indent: -1000px;
+            overflow: hidden;
+            cursor: pointer;
+            margin: auto;
+            display: inline-block;
+
+        }
+
+    </style>
+    <script type="text/javascript" src="https://point.swjoy.com/ch_capture?type=load1&channel=352070348&game=3717&region=%E6%9C%80%E6%96%B0%E5%BC%80%E6%9C%8D"></script>
+</head>
+<body>
+<div class="wrap" style="width:1400px;height: 700px ">
+<div class="main" id="main" style="display: none">
+    <div class="game-start" style="display: none">
+        <p class="p1">欢迎您,xxxxx</p>
+        <a href="#" id="jumpToUrl" target="_blank" class="btn-start">开始游戏</a>
+    </div>
+    <a href="javascript:void(0);" class="close"></a>
+        <div class="hd">
+    <ul class="tab" id="tab" >
+        <li  class="active">新用户快速注册</li>
+        <li>老玩家登录</li>
+    </ul>
+</div>
+<div class="bd">
+    <div class="reg form-box" id="reg">
+        <div class="error"><p id="reg_userName_message"></p></div>
+        <ul>
+            <li class="field">
+                <label class="col-1">注册账号</label>
+                <input type="text"  class="col-2 txt"  name="userName"/>
+                <p class="col-3">*4-6个字符</p>
+            </li>
+            <li class="field">
+                <label class="col-1">输入密码</label>
+                <input name="password" type="password"  class="col-2 txt">
+                <p class="col-3">*6-16个字符</p>
+            </li>
+            <li class="field">
+                <label class="col-1">确认密码</label>
+                <input name="cormPassword" type="password"  class="col-2 txt">
+                <p class="col-3">再次输入密码</p>
+            </li>
+            <li class="btns">
+                <input type="button" class="btn-start" value="开始游戏" id="regBtn">
+            </li>
+        </ul>
+    </div>
+    <div class="login form-box" id="login" style="display: none">
+        <div class="error"><p id="login_userName_message"></p></div>
+        <ul>
+            <li class="field">
+                <label class="col-1">通行证</label>
+                <input type="text" name="login_userName"  class="col-2 txt">
+            </li>
+            <li class="field">
+                <label class="col-1">密码</label>
+                <input type="password" name="login_password"  class="col-2 txt">
+            </li>
+            <li class="field">
+                <div class="forget"><a href="http://passport.kedou.com/front/find/pwdFind_all_front.jsp" target="_blank">忘记密码?</a></div>
+            </li>
+            <li class="btns">
+                <input type="button" class="btn-start" value="开始游戏" id="loginBtn">
+            </li>
+        </ul>
+    </div>
+</div>
+    <div id="qqq" ></div>
+</div>
+<div class="flash">
+    <object name="flash_obj" width="1400px" height="700px" align="middle" id="flash_obj" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+        <param name="movie" value="flash.swf">
+        <param name="quality" value="high">
+        <param name="bgcolor" value="#000000">
+        <param name="scale" value="noborder">
+        <param name="wmode" value="transparent">
+        <embed name="flash_obj" width="1400px" height="700px" align="middle" id="flash_obj" pluginspage="http://www.macromedia.com/go/getflashplayer" src="flash.swf" type="application/x-shockwave-flash" wmode="opaque" allowscriptaccess="always" scale="noborder" bgcolor="#000000" quality="high">
+    </object>
+    <a href="javascript:void(0);" class="flashbox" id="flashbox"></a>
+  </div>
+</div>
+<script src="/res/js/jquery-1.11.3.min.js"></script>
+<script src="/res/js/client_md.js"></script>
+<script src="/res/tmpl/general_register_open/a-1.2.js"></script>
+<script type="text/javascript">
+
+    var poster_unload_disposable = false;//退弹的初始值，如果为false
+
+    var loginAfterUrl = '';
+    var username = '';
+
+    function func_info(type,jfield,msg){
+        switch(jfield.attr('name')){
+            case 'userName':
+            case 'password':
+            case 'cormPassword':
+                $("#reg_userName_message").html(msg);
+                break;
+            default:
+                $("#login_userName_message").html(msg);
+                break;
+        }
+    }
+        var MEMBER_ID = '352070348';
+        var GAME_ID = '3717';
+                        var GAME_URL = "http://neg.swjoy.com/front/new_play.htm";
+                var GAME_DOMAIN = "neg.swjoy.com";
+
+    //新窗口打开标识
+    var openBlank = 0;
+    var jumpUrl = "https://gamead.swjoy.com/pub/201710101722241674/";
+
+    init3rdLogin({left:218, top:366, game: GAME_ID});
+</script>
+
+
+<script>
+$(function () {
+    //title特效
+    var step=0;
+    var _title=document.title;
+    var space='';
+    for(var i=0;i<=_title.length;i++)space+='　';
+    function flashTitle()
+    {
+        step++
+        if (step==3) {step=1}
+        if (step==1) {document.title=space}
+        if (step==2) {document.title=_title}
+        setTimeout(flashTitle,500);
+    }
+    flashTitle();
+
+    //弹出显示隐藏
+    $("#flashbox").on("click",function(){
+        $("#main").show();
+    })
+
+    
+    //tab切换
+    $('#tab li').on("click",function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        var index = $(this).index();
+        $(".form-box").eq(index).show().siblings().hide()
+    })
+})
+</script>
+<script type="text/javascript">
+    $(function(){
+        //"load1","load2","regclick","click2"
+        var url = "https://point.swjoy.com/ch_capture?channel=352070348&game=3717&region=%E6%9C%80%E6%96%B0%E5%BC%80%E6%9C%8D&type=";
+        $("#regBtn").click(function(){
+            $.getScript(url+"regclick");
+        });
+        function click2Capture(){
+            //由于flash上点击事件无法监测，改成通过判断注册、登录框是否可见来判断
+            if ($("input[name=userName]:visible").length>0 || $("input[name=login_userName]:visible").length>0){
+                $.getScript(url+"click2");
+                //只采集一次
+                $(document).unbind('click', click2Capture);
+            }
+        }
+        $(document).click(click2Capture);
+    });
+    $(function(){
+        $.getScript('https://point.swjoy.com/ch_capture?type=load2&channel=352070348&game=3717&region=%E6%9C%80%E6%96%B0%E5%BC%80%E6%9C%8D&tload1='+(typeof(_tload1)=='undefined'?'':_tload1));
+    });
+</script>
+
+            <script src="/res/tmpl/general_register_open/sw_unload.js"></script>
+
+    
+<div style="display:none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?beca8cd32495d59d103b986b4c86d326";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+9273</div>
+</body>
+</html>
