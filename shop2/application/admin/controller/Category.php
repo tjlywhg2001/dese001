@@ -2,13 +2,15 @@
 	namespace app\admin\controller;
 
 	use think\Controller;
-
+	use categorytree\Categorytree;
 
 	class Category extends Controller
 	{
 		public function lst(){
 
-			$catelist = db('category')->order('cate_id desc')->select();
+			$catelist = db('category')->select();
+			$category = new categorytree();
+			$catelist = $category ->categorytree($catelist);
 			$this -> assign('catelist',$catelist);
 
 			return view('list');
@@ -17,7 +19,10 @@
 
 
 		public function add(){
-
+			$catelist = db('category') -> select();
+			$categoryd = new categorytree();
+			$catelist = $categoryd ->categorytree($catelist);
+			$this -> assign('catelist',$catelist);
 			if (request()->isPost()){
 				$data=input('post.');
 				
@@ -52,32 +57,34 @@
 
 
 		public function edit(){
+			$catelist = db('category') -> select();
+			$this -> assign('catelist',$catelist);
 
 			if (request()->isPost()){
 				$data=input('post.');
 				
-				if ($data['brand_url']  && stripos($data['brand_url'],'http://') === false){
-					$data['brand_url'] = 'http://'.$data['brand_url'];
-				}
-				if ($_FILES['brand_img']['tmp_name']){
-					$oldimg=db('brand')->field('brand_img')->find($data['brand_id']);
-					$oldimgs=imgupload.$oldimg['brand_img'];
-						if (file_exists($oldimgs)){
-							@unlink($oldimgs);
-						}
+				// if ($data['brand_url']  && stripos($data['brand_url'],'http://') === false){
+				// 	$data['brand_url'] = 'http://'.$data['brand_url'];
+				// }
+				// if ($_FILES['brand_img']['tmp_name']){
+				// 	$oldimg=db('brand')->field('brand_img')->find($data['brand_id']);
+				// 	$oldimgs=imgupload.$oldimg['brand_img'];
+				// 		if (file_exists($oldimgs)){
+				// 			@unlink($oldimgs);
+				// 		}
 
-					$data['brand_img']=$this -> upload();
-				}
+				// 	$data['brand_img']=$this -> upload();
+				// }
 				
 
-				$validate = validate('brand');
+				$validate = validate('category');
 				if (!$validate -> check($data)){
 					$this -> error( $validate -> getError());
 				}
 
 
 
-				$save=db('brand')->update($data);
+				$save=db('category')->update($data);
 				// dump($_FILES);
 				// dump($data);die;
 				if($save){
@@ -91,9 +98,9 @@
 
 
 
-			$brand_id=input('brand_id');
-			$brands = db('brand')->find($brand_id);
-			$this->assign('brands',$brands);
+			$category_id=input('cate_id');
+			$categorys = db('category')->find($category_id);
+			$this->assign('categorys',$categorys);
 			return view();
 
 		}

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-04-22 00:43:13
+Date: 2018-04-23 23:55:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -84,7 +84,7 @@ CREATE TABLE `tp_category` (
   `cate_sort` smallint(6) NOT NULL DEFAULT '20' COMMENT '排序',
   `cate_pid` smallint(6) NOT NULL DEFAULT '0' COMMENT '上级栏目id',
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_category
@@ -94,4 +94,9 @@ INSERT INTO `tp_category` VALUES ('2', 'tyui', '5', 'rty', '', '0', '20', '0');
 INSERT INTO `tp_category` VALUES ('3', 'tyuisss', '5', 'rty', '', '0', '20', '0');
 INSERT INTO `tp_category` VALUES ('4', 'aewrtwertwe', '5', 'wertwertwet', 'wertwetrwet', '0', '20', '0');
 INSERT INTO `tp_category` VALUES ('5', 'asdfasdfgg', '5', 'asdf', '4tewrt', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('6', 'asdfasdfgg+++', '2', 'asdf', 'asdfasdfasf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('6', 'asdfasdfgg++++++++', '2', 'asdf', '', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('7', 'asdf', '2', 'asdfsss', '', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('8', 'f', '5', 'wertwert', '', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('9', 'asdfasdfas', '5', 'asdfasdfasdfasdfas', 'asdfadfasf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('10', 'arasdfasdfasdfa', '1', 'asdfasdfasdfasdfasfa', 'asdfasdfasdfasdfasfasfasfsadf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('11', '4123635566', '2', '551523112', 'q234123414565', '1', '20', '6');

@@ -52,7 +52,7 @@
                         <tbody>
                                 <tr>
                                 <td align="center" width="5%">{$category.cate_id}</td>
-                                <td align="center" width="12%">{$category.cate_name}</td>
+                                <td align="center" width="12%"><?php echo str_repeat('-',$category['lever']*5) ?>{$category.cate_name}</td>
                                 <td align="center" width="5%">{$category.cate_type}</td>
                                 <td align="center" width="10%">{$category.cate_keywords}</td>
                                 <td align="+center" width="42%">{$category.cate_description | cut_str=###,30}</td>
