@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-04-23 23:55:56
+Date: 2018-04-24 18:02:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -84,19 +84,14 @@ CREATE TABLE `tp_category` (
   `cate_sort` smallint(6) NOT NULL DEFAULT '20' COMMENT '排序',
   `cate_pid` smallint(6) NOT NULL DEFAULT '0' COMMENT '上级栏目id',
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_category
 -- ----------------------------
-INSERT INTO `tp_category` VALUES ('1', 'tyui', '5', '', '', '0', '20', '0');
-INSERT INTO `tp_category` VALUES ('2', 'tyui', '5', 'rty', '', '0', '20', '0');
-INSERT INTO `tp_category` VALUES ('3', 'tyuisss', '5', 'rty', '', '0', '20', '0');
-INSERT INTO `tp_category` VALUES ('4', 'aewrtwertwe', '5', 'wertwertwet', 'wertwetrwet', '0', '20', '0');
-INSERT INTO `tp_category` VALUES ('5', 'asdfasdfgg', '5', 'asdf', '4tewrt', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('6', 'asdfasdfgg++++++++', '2', 'asdf', '', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('7', 'asdf', '2', 'asdfsss', '', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('8', 'f', '5', 'wertwert', '', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('9', 'asdfasdfas', '5', 'asdfasdfasdfasdfas', 'asdfadfasf', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('10', 'arasdfasdfasdfa', '1', 'asdfasdfasdfasdfasfa', 'asdfasdfasdfasdfasfasfasfsadf', '1', '20', '0');
-INSERT INTO `tp_category` VALUES ('11', '4123635566', '2', '551523112', 'q234123414565', '1', '20', '6');
+INSERT INTO `tp_category` VALUES ('1', '1nav', '1', '', '', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('2', '2nav', '1', 'aaaa', 'aaaaaa', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('3', '1nav222', '2', 'bbbb', 'bbbbbbb', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('4', '2nav阿斯短发散发', '5', '啊啊啊啊', '啊啊啊啊', '1', '20', '3');
+INSERT INTO `tp_category` VALUES ('5', '3nav拜拜拜拜拜拜', '5', '草草草草', '草草草草草', '1', '20', '2');
+INSERT INTO `tp_category` VALUES ('6', '3nav男男女女奶奶', '3', '男男女女年', '难难难', '1', '20', '2');
