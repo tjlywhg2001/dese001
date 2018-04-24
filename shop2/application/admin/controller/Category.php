@@ -19,10 +19,6 @@
 
 
 		public function add(){
-			$catelist = db('category') -> select();
-			$categoryd = new categorytree();
-			$catelist = $categoryd ->categorytree($catelist);
-			$this -> assign('catelist',$catelist);
 			if (request()->isPost()){
 				$data=input('post.');
 				
@@ -33,6 +29,26 @@
 				// if ($_FILES['brand_img']['tmp_name']){
 				// 	$data['brand_img']=$this -> upload();
 				// }
+				if(in_array($data['cate_pid'], ['1','3'])){
+					// var_dump($data['cate_pid']);
+					$this->error("系统分类不能作为上级分类！");
+				}
+				// else{
+				// 	var_dump($data['cate_pid']);
+				// }
+				
+				if($data['cate_pid'] ==2){
+					$data['cate_type'] =3;
+				} 
+
+				 $cateID = db('category')->field('cate_pid')->find($data['cate_pid']);
+				 $cateID = $cateID['cate_pid'];
+				 if ($cateID == 3 ){
+				 	// var_dump($cateID);die;
+				 	$this->error("此分类不能作为上级分类！");
+				 }
+				 
+
 
 				$validate = validate('category');
 				if (!$validate -> check($data)){
@@ -51,6 +67,11 @@
 
 				return;
 			}
+						$catelist = db('category') -> select();
+			$categoryd = new categorytree();
+			$catelist = $categoryd ->categorytree($catelist);
+			$this -> assign('catelist',$catelist);
+
 			return view();
 
 		}
@@ -58,6 +79,8 @@
 
 		public function edit(){
 			$catelist = db('category') -> select();
+			$categoryd = new categorytree();
+			$catelist = $categoryd ->categorytree($catelist);
 			$this -> assign('catelist',$catelist);
 
 			if (request()->isPost()){
@@ -107,7 +130,7 @@
 
 
 		public function del($brand_id){
-			$del=db('brand')->delete($brand_id);
+			$del=db('category')->delete($category_id);
 			if($del){
 				$this->success('删除成功');
 			}else{
@@ -117,25 +140,4 @@
 		}
 
 
-		public function upload(){
-		    // 获取表单上传文件 例如上传了001.jpg
-		    $file = request()->file('brand_img');
-		    
-		    // 移动到框架应用根目录/public/uploads/ 目录下
-		    if($file){
-		        $info = $file->validate(['ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . 'static'. DS . 'uploadss');
-		        if($info){
-		            // 成功上传后 获取上传信息
-		            // 输出 jpg
-		            // echo $info->getExtension();
-		            // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
-		            return $info->getSaveName();
-		            // 输出 42a79759f284b767dfcb2a0197904287.jpg
-		            // echo $info->getFilename(); 
-		        }else{
-		            // 上传失败获取错误信息
-		            echo $file->getError();
-		        }
-		    }
-		}
 	}

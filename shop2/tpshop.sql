@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-04-24 18:02:45
+Date: 2018-04-24 23:21:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -84,7 +84,7 @@ CREATE TABLE `tp_category` (
   `cate_sort` smallint(6) NOT NULL DEFAULT '20' COMMENT '排序',
   `cate_pid` smallint(6) NOT NULL DEFAULT '0' COMMENT '上级栏目id',
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_category
@@ -95,3 +95,26 @@ INSERT INTO `tp_category` VALUES ('3', '1nav222', '2', 'bbbb', 'bbbbbbb', '1', '
 INSERT INTO `tp_category` VALUES ('4', '2nav阿斯短发散发', '5', '啊啊啊啊', '啊啊啊啊', '1', '20', '3');
 INSERT INTO `tp_category` VALUES ('5', '3nav拜拜拜拜拜拜', '5', '草草草草', '草草草草草', '1', '20', '2');
 INSERT INTO `tp_category` VALUES ('6', '3nav男男女女奶奶', '3', '男男女女年', '难难难', '1', '20', '2');
+INSERT INTO `tp_category` VALUES ('7', 'safasf', '5', 'adfaf', 'asdfasdfasf', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('8', 'asdfadfasdf', '5', 'asdfasdfasf', 'asdfasdfasdf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('9', 'asdfasfaf', '1', 'asdfasfasdf', 'asdfasdfasdf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('10', 'asdfasdfasf', '5', 'asdfasfasf', 'adfasdfasdf', '1', '20', '0');
+INSERT INTO `tp_category` VALUES ('11', 'asdfasdfa', '5', 'asdfasdfasdf', 'asdfasdfas', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('12', 'asdfasdfasdfasdfas', '5', '', 'asdfasdfasfasdf', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('13', 'asdqwerqwwerqwer', '5', 'qwerqwer', 'qwerqwerqwr', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('14', 'sdfqw4t f', '5', 'fgj fg ', 'asd fasf ', '1', '20', '3');
+INSERT INTO `tp_category` VALUES ('15', 'adrg fdg 57u', '5', 'sf ghfggh', ' dsf gsdfg', '1', '20', '3');
+INSERT INTO `tp_category` VALUES ('16', 'sdvhdbj', '1', 'sdfhgf', 'yruihjl', '1', '20', '6');
+INSERT INTO `tp_category` VALUES ('17', 'dg rth f', '5', 'hkghk m', 'hvhjk gu', '1', '20', '3');
+INSERT INTO `tp_category` VALUES ('18', 'dtrhveub', '1', 'nfujik', 'kgmhijolm', '1', '20', '5');
+INSERT INTO `tp_category` VALUES ('19', 'dtrhveub33', '1', '3', '354ywr5y', '1', '20', '6');
+INSERT INTO `tp_category` VALUES ('20', 'ertv5e6yuny', '5', 'uip,uop[.f', 'gyunil ,ui', '1', '20', '6');
+INSERT INTO `tp_category` VALUES ('21', 'asdf asdf ', '5', '', 'asdf asd ', '1', '20', '16');
+INSERT INTO `tp_category` VALUES ('22', 'asdfasdfasfasdf', '5', 'asdfgasdf', 'asdfasdfasf', '1', '20', '3');
+INSERT INTO `tp_category` VALUES ('23', 'asdfasfadf', '5', 'sdfasdfasdf', 'asdfasdfasf', '1', '20', '1');
+INSERT INTO `tp_category` VALUES ('24', 'dtrhveubsa', '5', 'asdfasdf', 'asdfasdfasf', '1', '20', '18');
+INSERT INTO `tp_category` VALUES ('25', 'dtrhveub33eee', '5', 'adfaf', 'sdfvbeyt', '1', '20', '5');
+INSERT INTO `tp_category` VALUES ('26', '拜拜拜拜444', '5', 'as打发打发', '阿萨德发射点发烧饭', '1', '20', '5');
+INSERT INTO `tp_category` VALUES ('27', '阿萨德发射点发烧豆腐', '5', '阿萨德发射点发', '啊但是发射点发', '1', '20', '5');
+INSERT INTO `tp_category` VALUES ('28', '阿士东维拉人气旺旺而且', '5', '犬瘟热', '弃我而去韦尔奇', '1', '20', '5');
+INSERT INTO `tp_category` VALUES ('29', '同样如若天羽人体与人图n', '5', '儿童因而也', '儿童因而他也认同与', '1', '20', '5');

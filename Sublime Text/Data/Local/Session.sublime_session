@@ -1,8 +1,8 @@
 {
 	"folder_history":
 	[
-		"/H/gitfiles/dese001/shop2",
 		"/C/dese001/shop2",
+		"/H/gitfiles/dese001/shop2",
 		"/C/githaha/dese001/shop2"
 	],
 	"last_version": 3143,
@@ -20,7 +20,15 @@
 				[
 					[
 						"cate",
-						"categorytree"
+						"cate_pid"
+					],
+					[
+						"cat",
+						"category"
+					],
+					[
+						"bl",
+						"block"
 					],
 					[
 						"cate_",
@@ -59,38 +67,46 @@
 			"buffers":
 			[
 				{
-					"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/add.html",
+					"file": "/C/dese001/shop2/application/admin/view/category/edit.html",
 					"settings":
 					{
-						"buffer_size": 8117,
+						"buffer_size": 9435,
 						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
 				},
 				{
-					"file": "/H/gitfiles/dese001/shop2/application/admin/controller/Category.php",
+					"file": "/C/dese001/shop2/application/admin/view/category/add.html",
 					"settings":
 					{
-						"buffer_size": 3237,
+						"buffer_size": 8367,
 						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
 				},
 				{
-					"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/edit.html",
+					"file": "/C/dese001/shop2/application/admin/view/category/list.html",
 					"settings":
 					{
-						"buffer_size": 8740,
+						"buffer_size": 5423,
 						"encoding": "UTF-8",
 						"line_ending": "Windows"
 					}
 				},
 				{
-					"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/list.html",
+					"file": "/C/dese001/shop2/application/admin/controller/Category.php",
 					"settings":
 					{
-						"buffer_size": 4542,
+						"buffer_size": 3087,
 						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/dese001/shop2/extend/categorytree/Categorytree.php",
+					"settings":
+					{
+						"buffer_size": 836,
 						"line_ending": "Windows"
 					}
 				}
@@ -135,18 +151,21 @@
 			},
 			"expanded_folders":
 			[
-				"/H/gitfiles/dese001/shop2",
-				"/H/gitfiles/dese001/shop2/application",
-				"/H/gitfiles/dese001/shop2/application/admin",
-				"/H/gitfiles/dese001/shop2/application/admin/controller",
-				"/H/gitfiles/dese001/shop2/application/admin/view",
-				"/H/gitfiles/dese001/shop2/application/admin/view/brand",
-				"/H/gitfiles/dese001/shop2/application/admin/view/category",
-				"/H/gitfiles/dese001/shop2/extend",
-				"/H/gitfiles/dese001/shop2/extend/categorytree"
+				"/C/dese001/shop2",
+				"/C/dese001/shop2/application",
+				"/C/dese001/shop2/application/admin",
+				"/C/dese001/shop2/application/admin/controller",
+				"/C/dese001/shop2/application/admin/view",
+				"/C/dese001/shop2/application/admin/view/brand",
+				"/C/dese001/shop2/application/admin/view/category",
+				"/C/dese001/shop2/extend",
+				"/C/dese001/shop2/extend/categorytree"
 			],
 			"file_history":
 			[
+				"/H/gitfiles/dese001/shop2/application/admin/controller/Category.php",
+				"/H/gitfiles/dese001/shop2/application/admin/view/category/edit.html",
+				"/H/gitfiles/dese001/shop2/application/admin/view/category/list.html",
 				"/H/gitfiles/dese001/shop2/public/222.php",
 				"/C/dese001/shop2/application/admin/view/category/edit.html",
 				"/C/dese001/shop2/application/admin/view/category/list.html",
@@ -191,6 +210,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"dataID",
 					"log",
 					"exp",
 					"ceil",
@@ -205,6 +225,7 @@
 				"regex": false,
 				"replace_history":
 				[
+					"cateID",
 					"log10",
 					"log",
 					"exp",
@@ -221,7 +242,7 @@
 			"folders":
 			[
 				{
-					"path": "H:\\gitfiles\\dese001\\shop2"
+					"path": "C:\\dese001\\shop2"
 				}
 			],
 			"groups":
@@ -232,19 +253,19 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/add.html",
-							"semi_transient": true,
+							"file": "/C/dese001/shop2/application/admin/view/category/edit.html",
+							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 8117,
+								"buffer_size": 9435,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2741,
-										2741
+										4045,
+										4045
 									]
 								],
 								"settings":
@@ -255,7 +276,7 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 432.0,
+								"translation.y": 972.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 3,
@@ -263,19 +284,87 @@
 						},
 						{
 							"buffer": 1,
-							"file": "/H/gitfiles/dese001/shop2/application/admin/controller/Category.php",
+							"file": "/C/dese001/shop2/application/admin/view/category/add.html",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3237,
+								"buffer_size": 8367,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										763,
-										763
+										3013,
+										5333
+									]
+								],
+								"settings":
+								{
+									"origin_encoding": "UTF-8",
+									"syntax": "Packages/HTML/HTML.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1214.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/C/dese001/shop2/application/admin/view/category/list.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5423,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1138,
+										1138
+									]
+								],
+								"settings":
+								{
+									"origin_encoding": "UTF-8",
+									"syntax": "Packages/HTML/HTML.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 648.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 3,
+							"file": "/C/dese001/shop2/application/admin/controller/Category.php",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3087,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										709,
+										709
 									]
 								],
 								"settings":
@@ -285,78 +374,40 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 342.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 1,
 							"type": "text"
-						}
-					]
-				},
-				{
-					"selected": 1,
-					"sheets":
-					[
-						{
-							"buffer": 2,
-							"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/edit.html",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 8740,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2638,
-										2638
-									]
-								],
-								"settings":
-								{
-									"origin_encoding": "UTF-8",
-									"syntax": "Packages/HTML/HTML.sublime-syntax",
-									"tab_size": 4,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 540.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
 						},
 						{
-							"buffer": 3,
-							"file": "/H/gitfiles/dese001/shop2/application/admin/view/category/list.html",
+							"buffer": 4,
+							"file": "/C/dese001/shop2/extend/categorytree/Categorytree.php",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4542,
+								"buffer_size": 836,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2465,
-										2465
+										836,
+										836
 									]
 								],
 								"settings":
 								{
-									"origin_encoding": "UTF-8",
-									"syntax": "Packages/HTML/HTML.sublime-syntax",
-									"tab_size": 4,
-									"translate_tabs_to_spaces": true
+									"origin_encoding": "ASCII",
+									"syntax": "Packages/PHP/PHP.sublime-syntax",
+									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 629.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 4,
 							"type": "text"
 						}
 					]
@@ -390,7 +441,7 @@
 				"cols":
 				[
 					0.0,
-					0.285906335208,
+					0.460921067088,
 					1.0
 				],
 				"rows":
@@ -439,7 +490,7 @@
 				],
 				"width": 0.0
 			},
-			"selected_group": 1,
+			"selected_group": 0,
 			"settings":
 			{
 			},
