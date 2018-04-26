@@ -53,10 +53,10 @@
                                 <tr>
                                 <td align="center" width="5%">{$category.cate_id}</td>
                                 <td align="+center" width="12%">
-                                    {if condition="$category['cate_pid'] neq 0"}
+<!--                                     {if condition="$category['cate_pid'] neq 0"}
                                      |
                                     {/if}
-                                    <?php echo str_repeat('-',$category['lever']*4) ?>
+ -->                                    <?php echo str_repeat('◆',$category['lever']*4).'&nbsp;' ?>
                                     {$category.cate_name}
                                     
                                 </td>
@@ -96,6 +96,11 @@
                                     <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('cate_id'=>$category['cate_id']))}')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
+                                    {else /}
+                                    <a href="#" disabled="disabled" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+
                                     {/notin}
                                 </td>
                             </tr>

@@ -19,23 +19,16 @@
 
 
 		public function add(){
+			$catelist = db('category') -> select();
+			$categoryd = new categorytree();
+			$catelist = $categoryd ->categorytree($catelist);
+			$this -> assign('catelist',$catelist);
 			if (request()->isPost()){
 				$data=input('post.');
 				
-				// if ($data['brand_url']  && stripos($data['brand_url'],'http://') === false){
-				// 	$data['brand_url'] = 'http://'.$data['brand_url'];
-				// } 
-
-				// if ($_FILES['brand_img']['tmp_name']){
-				// 	$data['brand_img']=$this -> upload();
-				// }
-				if(in_array($data['cate_pid'], ['1','3'])){
-					// var_dump($data['cate_pid']);
+				if(in_array($data['cate_pid'], ['1','3'],false)){
 					$this->error("系统分类不能作为上级分类！");
 				}
-				// else{
-				// 	var_dump($data['cate_pid']);
-				// }
 				
 				if($data['cate_pid'] ==2){
 					$data['cate_type'] =3;
@@ -43,8 +36,7 @@
 
 				 $cateID = db('category')->field('cate_pid')->find($data['cate_pid']);
 				 $cateID = $cateID['cate_pid'];
-				 if ($cateID == 3 ){
-				 	// var_dump($cateID);die;
+				 if ($cateID == 2 ){
 				 	$this->error("此分类不能作为上级分类！");
 				 }
 				 
@@ -67,10 +59,6 @@
 
 				return;
 			}
-						$catelist = db('category') -> select();
-			$categoryd = new categorytree();
-			$catelist = $categoryd ->categorytree($catelist);
-			$this -> assign('catelist',$catelist);
 
 			return view();
 
@@ -129,8 +117,8 @@
 		}
 
 
-		public function del($brand_id){
-			$del=db('category')->delete($category_id);
+		public function del($cate_id){
+			$del=db('category')->delete($cate_id);
 			if($del){
 				$this->success('删除成功');
 			}else{
