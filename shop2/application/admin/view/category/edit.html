@@ -45,14 +45,21 @@
                             <div class="col-sm-6">
                                 <select name="cate_pid">
                                     {volist name="catelist" id="categoryd"}
-<!--                                     <option value="">{$categoryd.cate_pid}</option>
- -->                                    <option value="">{$categorys.cate_name}</option>
-<!--                                     <option 
-                                     {if condition="$categorys['cate_pid'] eq 0"}
-                                     selected="select">{$categorys.cate_name}
-                                    {/if}                                     
-                                </option>
- -->                                    {/volist}
+                                    <option {if condition="$categoryd['cate_pid'] eq $categoryd['cate_id'] && $categoryd['cate_pid'] gt 0"}
+                                    selected="selected" value="{$categoryd.cate_id}">
+
+                                    {elseif condition="$categoryd['cate_pid'] eq 0 "}
+                                    selected="selected" value="{$categoryd.cate_id}">
+                                    {else /}
+                                    style="display: none" value="{$categoryd.cate_id}">
+                                    {/if} 
+                                    {if condition="$categoryd['cate_pid'] neq 0"}
+                                     |
+                                    {/if}
+                                        <?php echo str_repeat('-',$categoryd['lever']*5) ?>
+                                        {$categoryd.cate_name}
+                                    </option>
+                                    {/volist}
                                 </select>
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
@@ -80,13 +87,13 @@
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
                                         <input class="inverted colored-blue" value="2" name="cate_type" type="radio" {if condition="$categorys['cate_type'] eq 2"} checked="checked" {/if}>
-                                        <span class="text">分类帮助</span>
+                                        <span class="text">帮助分类</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
                                         <input class="inverted colored-blue" value="3" name="cate_type" type="radio" {if condition="$categorys['cate_type'] eq 3"} checked="checked" {/if}>
-                                        <span class="text">网店分类</span>
+                                        <span class="text">网店帮助</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left; padding-right: 10px;">

@@ -26,8 +26,11 @@
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('Category/add')}'"> <i class="fa fa-plus"></i> Add
+
+<form action="" method="post">                    
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('Category/add')}'"> <i class="fa fa-plus"></i> 添加分类
+</button>
+<button type="submit" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"> <i class="fa fa-plus"></i> 分类排序
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -64,9 +67,9 @@
                                 {if condition="$category['cate_type'] eq 1"}
                                     系统分类
                                 {elseif condition="$category['cate_type'] eq 2"}
-                                    分类帮助
+                                    帮助分类
                                 {elseif condition="$category['cate_type'] eq 3"}
-                                    网店分类
+                                    网店帮助
                                 {elseif condition="$category['cate_type'] eq 4"}
                                     网店信息
                                 {elseif condition="$category['cate_type'] eq 5"}
@@ -77,7 +80,7 @@
                                 <td align="center" width="10%">{$category.cate_keywords}</td>
                                 <td align="+center" width="42%">{$category.cate_description | cut_str=###,30}</td>
                                 <td align="center" width="4%">
-                                    <input type="text" value="{$category.cate_sort}" style="width: 30px; text-align: center;" />
+                                    <input type="text" name="cate_sort[{$category.cate_id}]" value="{$category.cate_sort}" style="width: 30px; text-align: center;" />
                                 </td>
                                <td align="center" width="10%">
                                 
@@ -113,7 +116,7 @@
         </div>
     </div>
 </div>
-
+</form>
                 </div>
                 <!-- /Page Body -->
             </div>
