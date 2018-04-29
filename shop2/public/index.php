@@ -13,6 +13,9 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
-define('imgupload', __DIR__ . '/../public/static/uploadss');
+define('imgupload', __DIR__ . '/../public/static/uploadss/');
+define('ueditor', __DIR__ . '/../public/static/ueditor/image');
+define('http_ueditor', '/static/ueditor/image');
+define('delueditor', __DIR__ . '/../.././');
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';

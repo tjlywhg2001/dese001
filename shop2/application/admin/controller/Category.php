@@ -65,6 +65,10 @@
 
 				return;
 			}
+			$category_id=input('cate_id');
+			$categorys = $cates ->find($category_id);
+			$this->assign('categorys',$categorys);
+
 
 			return view();
 
@@ -106,6 +110,7 @@
 		}
 
 
+
 		public function del($cate_id){
 
 			$cates =db('category');
@@ -116,6 +121,18 @@
 			$arrayss = array_intersect($arrays,$al);
 			if($arrayss){
 				$this->error('交集不允许被删掉');
+			}
+
+			$artid = db('article');
+			foreach ($al as $k => $v) {
+				$art = db('article') -> field('ar_id,ar_thumbnail') ->where(array('ar_cateid'=>$v)) ->select();
+				foreach ($art as $k1 => $v1) {
+					$oldimgs=imgupload.$v1['ar_thumbnail'];
+					if (file_exists($oldimgs)){
+						@unlink($oldimgs);
+					}
+					$artid -> delete($v1['ar_id']);
+				}
 			}
 
 			$del=$cates->delete($al);

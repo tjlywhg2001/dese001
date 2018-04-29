@@ -44,13 +44,16 @@
                             <div class="col-sm-6">
                                 <select name="cate_pid">
                                     <option value="">顶级分类</option>
-                                    {volist name="catelist" id="categoryd"}
-                                    <option value="{$categoryd.cate_id}">
-                                    {if condition="$categoryd['cate_pid'] neq 0"}
+                                    {volist name="catelist" id="category"}
+                                    <option value="{$category.cate_id}"
+                                    {if condition="$category['cate_pid'] eq 0" } disabled='disabled' style='color:#f00'
+                                    {/if}>
+                                    
+                                    {if condition="$category['cate_pid'] neq 0"}
                                      |
                                     {/if}
-                                        <?php echo str_repeat('-',$categoryd['lever']*5) ?>
-                                        {$categoryd.cate_name}
+                                        <?php echo str_repeat('-',$category['lever']*5) ?>
+                                        {$category.cate_name}
                                     </option>
                                     {/volist}
                                 </select>

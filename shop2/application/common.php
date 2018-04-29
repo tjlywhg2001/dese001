@@ -11,6 +11,24 @@
 
 // 应用公共文件
 // 
+function viewdir($dir=ueditor){
+
+   $files = array();
+   $dirlist = scandir($dir);
+   foreach ($dirlist as $file) {
+      if ($file != '.' && $file !='..'){
+         if (is_dir($dir.'/'.$file)){
+            $files[$file] = viewdir($dir.'/'.$file);
+         }else{
+            $files[] = $dir.'/'.$file;
+         }
+      }
+
+   }
+   return $files;
+}
+
+// 
 // http://www.tongpankt.com/819
 // 
 // 

@@ -105,6 +105,13 @@
 
 
 		public function del($brand_id){
+			$ardb = db('brand');
+			$oldimg= $ardb ->field('brand_img')->find($brand_id);
+			$oldimgs=imgupload.$oldimg['brand_img'];
+			if (file_exists($oldimgs)){
+				@unlink($oldimgs);
+			}
+
 			$del=db('brand')->delete($brand_id);
 			if($del){
 				$this->success('删除成功');
