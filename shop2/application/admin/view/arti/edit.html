@@ -40,7 +40,7 @@
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
 
-
+                        <input type="hidden" name="ar_id" value="{$categorys.ar_id}">
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
                             <div class="col-sm-6">
@@ -82,7 +82,7 @@
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">文章描述</label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="username" placeholder="" name="ar_description" type="text" value="{$categorys.ar_description}"></textarea>
+                                <textarea class="form-control" id="username" name="ar_description">{$categorys.ar_description}</textarea>
                             </div>
                             <p class="help-block col-sm-4 red"></p>
                         </div>
@@ -133,11 +133,10 @@
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">内容</label>
                             <div class="col-sm-6">
-                                <div id="content" name="ar_content" type="text" value="{$categorys.ar_content}"></div>
+                                <textarea id="content" name="ar_content">{$categorys.ar_content}</textarea>
                             </div>
                             <p class="help-block col-sm-4 red"></p>
                         </div>
-
 
 
                         <div class="form-group">
@@ -151,7 +150,7 @@
                                 </div>
                                 <div class="radio" style="float:left">
                                     <label>
-                                        <input class="inverted colored-blue" value="0" {if condition="$categorys['ar_top'] eq 1"} checked="checked" {/if} name="ar_top" type="radio">
+                                        <input class="inverted colored-blue" value="0" {if condition="$categorys['ar_top'] eq 0"} checked="checked" {/if} name="ar_top" type="radio">
                                         <span class="text">否</span>
                                     </label>
                                 </div>
@@ -170,7 +169,7 @@
                                 </div>
                                 <div class="radio" style="float:left">
                                     <label>
-                                        <input class="inverted colored-blue" value="0" {if condition="$categorys['ar_status'] eq 1"} checked="checked" {/if} name="ar_status" type="radio">
+                                        <input class="inverted colored-blue" value="0" {if condition="$categorys['ar_status'] eq 0"} checked="checked" {/if} name="ar_status" type="radio">
                                         <span class="text">否</span>
                                     </label>
                                 </div>
@@ -211,9 +210,11 @@
     {include file='/common/footer'}
     <script>
         $("#dell").click(function(){
+            $(this).remove();
             $(".imgss").remove();
         });
+
     </script>                               
 
 
-</body></html>
+</body></html> 

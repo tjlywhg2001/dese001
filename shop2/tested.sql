@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-04-30 07:35:17
+Date: 2018-05-01 16:29:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,13 +34,12 @@ CREATE TABLE `tp_article` (
   `ar_cateid` smallint(6) NOT NULL COMMENT '所属栏目',
   `ar_addtime` int(10) NOT NULL COMMENT '发布时间',
   PRIMARY KEY (`ar_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_article
 -- ----------------------------
-INSERT INTO `tp_article` VALUES ('18', 'asdfasdfasd', '', '', '', '', '', '20180429\\56f66e763d4b430855707ec33a7018bb.jpg', '', '0', '1', '4', '1525014483');
-INSERT INTO `tp_article` VALUES ('19', 'vvvgggggggggggggg', '', 'gg', '', '', '', '', '<p><img src=\"/ueditor/20180430/1525043880101361.jpg\" title=\"1525043880101361.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880371493.jpg\" title=\"1525043880371493.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880316713.jpg\" title=\"1525043880316713.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880587943.jpg\" title=\"1525043880587943.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880481095.jpg\" title=\"1525043880481095.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880357551.jpg\" title=\"1525043880357551.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880798454.jpg\" title=\"1525043880798454.jpg\"/></p><p><img src=\"/ueditor/20180430/1525043880869629.jpg\" title=\"1525043880869629.jpg\"/></p><p><br/></p>', '0', '1', '11', '1525043909');
+INSERT INTO `tp_article` VALUES ('24', '爱得发疯沙发', '儿童网特网特网特', '52543525', '33333', '11@333.com', 'http://3333333', '20180501\\f802e9443d371ba1d572d4cf0703f5f9.jpg', '<p>啊是发是发发发发方法</p><p><br/></p><p><img src=\"/static/ueditor/image/20180501/1525162970646208.jpg\" title=\"1525162970646208.jpg\"/></p><p><br/></p>', '1', '0', '3', '1525161027');
 
 -- ----------------------------
 -- Table structure for `tp_brand`

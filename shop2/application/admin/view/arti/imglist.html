@@ -47,7 +47,7 @@
                                     <td><img height="50" src="{$haha}">
                                     </td>
                                   <td align="center">
-                                    <a href="#" onclick="return delimg(this)" id="{$haha}" class="btn btn-danger btn-sm shiny">
+                                    <a href="#" onClick=" return delimg(this)" id="{$haha}" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -57,12 +57,11 @@
                    </table>
                         <script>
                             function delimg(i){
-                                if ( !confirm('确定删除吗？')){
-                                    return false;
-                                }
+                                // if ( !confirm('确定删除吗？')){
+                                //     return false;
+                                // }
                                 var url = "{:url('delimg')}";
                                 var imgscr = $(i).attr('id');
-                                alert(imgscr);
                                 $.ajax({
                                     url : url,
                                     type : "post",

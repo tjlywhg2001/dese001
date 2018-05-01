@@ -95,9 +95,9 @@
 				}
 
 
+				// dump($data);
 
 				$save= $ardb ->update($data);
-				// dump($_FILES);
 				// dump($data);die;
 				if($save){
 					$this->success('修改成功','lst');
@@ -108,14 +108,14 @@
 				return;
 			}
 
+			$category_id=input('ar_id');
+			$categorys = $ardb ->find($category_id);
+			$this->assign('categorys',$categorys);
 	
 			$artilist = db('category') ->select();
 			$artilist = $category -> categorytree($artilist);
 			$this -> assign('artilist',$artilist);
 
-			$category_id=input('ar_id');
-			$categorys = $ardb ->find($category_id);
-			$this->assign('categorys',$categorys);
 
 
 
@@ -123,17 +123,6 @@
 
 		}
 
-		// public function dell($ar_thum){
-
-		// 	$ardb = db('article');
-		// 	$oldimg= $ardb ->field('ar_thumbnail')->find($ar_thum);
-		// 	$oldimgs=imgupload.$oldimg['ar_thumbnail'];
-		// 	if (file_exists($oldimgs)){
-		// 		@unlink($oldimgs);
-		// 	}
-		// 	return view('edit');
-
-		// }
 
 
 		public function del($ar_id){
@@ -201,10 +190,10 @@
 
 
 		public function delimg(){
-			$imgscr = input('imgsrc');
-			//var_dump($imgscr);die;
+			$imgscr = input('imgscr');
+			// var_dump($imgscr);
 			$imgscr = delueditor.$imgscr;
-			var_dump($imgscr);die;
+			// var_dump($imgscr);die;
 			if (file_exists($imgscr)) {
 				if (@unlink($imgscr)) {
 					echo 1;
@@ -220,3 +209,7 @@
 		
 		
 	}
+
+
+
+
