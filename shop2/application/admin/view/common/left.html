@@ -7,9 +7,14 @@
 </div>
 <!-- /Page Sidebar Header -->
 <!-- Sidebar Menu -->
+<style>
+ul>li{
+    box-shadow: none;
+}
+</style>
 <ul class="nav sidebar-menu">
     <!--Dashboard-->
-    <li>
+<!--     <li>
         <a href="#">
             <i class="menu-icon fa fa-film"></i>
             <span class="menu-text">ThinkPHP5视频教程</span>
@@ -23,21 +28,7 @@
             <i class="menu-expand"></i>
         </a>
     </li>                        
-    <li>
-        <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-gear"></i>
-            <span class="menu-text">栏目模块</span>
-            <i class="menu-expand"></i>
-        </a>
-        <ul class="submenu"  style="display: block;">
-            <li>
-                <a href="{:url('brand/lst')}">
-                    <span class="menu-text">栏目分类</span>
-                    <i class="menu-expand"></i>
-                </a>
-            </li>
-        </ul>
-    </li>    <li>
+ -->    <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-gear"></i>
             <span class="menu-text">栏目模块</span>
@@ -46,25 +37,85 @@
         <ul class="submenu"  style="display: block;">
             <li>
                 <a href="{:url('Category/lst')}">
-                    <span class="menu-text">栏目分类</span>
-                    <i class="menu-expand"></i>
-                </a>
-            </li>
-            <li>
-                <a href="{:url('arti/lst')}">
-                    <span class="menu-text">文章分类</span>
-                    <i class="menu-expand"></i>
-                </a>
-            </li>
-            <li>
-                <a href="{:url('arti/imglist')}">
-                    <span class="menu-text">文章分类</span>
+                    <span class="menu-text">栏目管理</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
         </ul>
     </li>
     <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">品牌模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="{:url('brand/lst')}">
+                    <span class="menu-text">品牌管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">文章模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="{:url('arti/lst')}">
+                    <span class="menu-text">文章管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{:url('arti/imglist')}">
+                    <span class="menu-text">图片管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">链接模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="{:url('link/lst')}">
+                    <span class="menu-text">链接管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">配置模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="{:url('+/lst')}">
+                    <span class="menu-text">配置项</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{:url('config/lst')}">
+                    <span class="menu-text">配置管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+<!--     <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-gear"></i>
             <span class="menu-text">系统</span>
@@ -91,6 +142,6 @@
             </li>
         </ul>
     </li>                        
-</ul>
+ --></ul>
 <!-- /Sidebar Menu -->
 </div>

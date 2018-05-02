@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+	<!-- 头部 -->
+{include file='/common/top'}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                        <li class="active">配置管理</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<button type="button" tooltip="添加配置" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('config/add')}'"> <i class="fa fa-plus"></i> 配置管理
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">配置英文</th>
+                                <th class="text-center">配置中文</th>
+                                <th class="text-center">表单类型</th>
+                                <th class="text-center">配置类型</th>
+                                <th class="text-center">配置可选值</th>
+                                <th class="text-center">默认值</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        {volist name="configlist" id="config"}
+                        <tbody>
+                                <tr>
+                                <td align="center">{$config.config_id}</td>
+                                <td align="center">{$config.config_ename}</td>
+                                <td align="center">{$config.config_cname}</td>
+                                <td align="+center">                                
+                                {if condition="$config['config_formtype'] eq input"}
+                                    input
+                                {elseif condition="$config['config_formtype'] eq radio"}
+                                    radio
+                                {elseif condition="$config['config_formtype'] eq checked"}
+                                    checked
+                                {elseif condition="$config['config_formtype'] eq textarea"}
+                                    textarea
+                                {elseif condition="$config['config_formtype'] eq select"}
+                                    select
+                                {elseif condition="$config['config_formtype'] eq file"}
+                                    file
+                                {/if}
+                                </td>
+                                <td align="center">
+                                {if condition="$config['config_type'] neq 0"}
+                                    店铺配置
+                                {else /}
+                                    商品配置
+                                {/if}
+                                </td>
+                                <td align="center">{$config.config_values}</td>
+                                <td align="center">{$config.config_default}</td>
+                                <td align="center">
+                                    <a href="{:url('edit',array('config_id'=>$config['config_id']))}" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('config_id'=>$config['config_id']))}')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        {/volist}
+                    </table>
+                </div>
+                <div> 
+                    {$configlist->render()}
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file='/common/footer'}    
+
+
+</body></html>
