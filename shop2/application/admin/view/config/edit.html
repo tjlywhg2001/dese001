@@ -2,13 +2,13 @@
 <html>
 {include file='/common/_meta'}
 <body>
-	<!-- 头部 -->
+    <!-- 头部 -->
 {include file='/common/top'}
-	<!-- /头部 -->
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-			            <!-- Page Sidebar -->
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+                        <!-- Page Sidebar -->
         {include file='/common/left'}
             <!-- /Page Sidebar -->
             <!-- Page Content -->
@@ -20,9 +20,9 @@
                             <a href="{:url('Index/index')}">系统</a>
                         </li>
                                             <li>
-                            <a href="{:url('Brand/lst')}">用户管理</a>
+                            <a href="{:url('config/lst')}">配置管理</a>
                         </li>
-                        <li class="active">添加用户</li>
+                        <li class="active">添加配置</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -34,69 +34,112 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增品牌</span>
+                <span class="widget-caption">新增配置</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="brand_id" value="{$brands.brand_id}">
+                        <input type="hidden" name="config_id" value="{$config.config_id}">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">英文名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_name" rtype="text" value="{$brands.brand_name}">
+                                <input class="form-control" id="username" placeholder="" name="config_ename" type="text" value="{$config.config_ename}">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌地址</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">中文名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_url" type="text" value="{$brands.brand_url}">
+                                <input class="form-control" id="username" placeholder="" name="config_cname" type="text" value="{$config.config_cname}">
                             </div>
                             <p class="help-block col-sm-4 red"></p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌描述</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_description" type="text" value="{$brands.brand_description}">
-                            </div>
-                            <p class="help-block col-sm-4 red"></p>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
-                            <div class="col-sm-6">
-                                <input class="" id="username" name="brand_img" type="file" value="{$brands.brand_img}">
-                                {if condition="$brands['brand_img'] neq ''"}
-                                    <img src="__upload__/{$brands.brand_img}" style="height: 30px">
-                                {else/}
-                                    暂无图片
-                                {/if}
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌状态</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">表单类型</label>
                             <div class="col-sm-6">
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="1" name="brand_status" type="radio" {if condition="$brands['brand_status'] eq 1"} checked="checked" {/if}>
-                                        <span class="text">显示</span>
+                                        <input class="inverted colored-blue" value="input" name="config_formtype" type="radio"  {if condition="$config['config_formtype'] eq 'input'"} checked="checked" {/if}>
+                                        <span class="text">input</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="radio" name="config_formtype" type="radio" {if condition="$config['config_formtype'] eq 'radio'"} checked="checked" {/if}>
+                                        <span class="text">radio</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="checked" name="config_formtype" type="radio" {if condition="$config['config_formtype'] eq 'checked'"} checked="checked" {/if}>
+                                        <span class="text">checked</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="textarea" name="config_formtype" type="radio" {if condition="$config['config_formtype'] eq 'textarea'"} checked="checked" {/if}>
+                                        <span class="text">textarea</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="select" name="config_formtype" type="radio" {if condition="$config['config_formtype'] eq 'select'"} checked="checked" {/if}>
+                                        <span class="text">select</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="file" name="config_formtype" type="radio" {if condition="$config['config_formtype'] eq 'file'"} checked="checked" {/if}>
+                                        <span class="text">file</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="config_type" type="radio" {if condition="$config['config_type'] eq 1"} checked="checked" {/if}>
+                                        <span class="text">店铺配置</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left">
                                     <label>
-                                        <input class="inverted colored-blue" value="0" name="brand_status" type="radio" {if condition="$brands['brand_status'] eq 0"} checked="checked" {/if}>
-                                        <span class="text">隐藏</span>
+                                        <input class="inverted colored-blue" value="0" name="config_type" type="radio" {if condition="$config['config_type'] eq 0"} checked="checked" {/if}>
+                                        <span class="text">商品配置</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置可选值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_values" type="text" value="{$config.config_values}">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">默认值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_default" type="text" value="{$config.config_default}">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
@@ -114,10 +157,10 @@
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-		</div>	
-	</div>
+        </div>  
+    </div>
 
-	    <!--Basic Scripts-->
+        <!--Basic Scripts-->
     {include file='/common/footer'}
     
 

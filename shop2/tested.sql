@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-02 23:09:09
+Date: 2018-05-03 00:46:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -101,11 +101,13 @@ CREATE TABLE `tp_config` (
   `config_values` varchar(60) NOT NULL COMMENT '可选值',
   `config_default` varchar(255) NOT NULL COMMENT '默认值',
   PRIMARY KEY (`config_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_config
 -- ----------------------------
+INSERT INTO `tp_config` VALUES ('2', 'qerrqw', 'qewrwerq', 'checked', '1', 'asdfaf1,aefer,啊打发打发,啊打发打发,请二位,瑞特他', 'dffff');
+INSERT INTO `tp_config` VALUES ('3', 'adfaf', '34134', 'input', '1', '123,而且而,手动阀打发', '');
 
 -- ----------------------------
 -- Table structure for `tp_links`

@@ -20,6 +20,13 @@
 
 			if (request()->isPost()){
 				$data=input('post.');
+
+				if ($data['config_formtype'] =='radio' || $data['config_formtype'] =='select' || $data['config_formtype'] =='checked' ) {
+				 	# code...
+				 } {
+					$data['config_values'] = str_replace('，', ',', $data['config_values']);
+					$data['config_default'] = str_replace('，', ',', $data['config_default']);
+				}
 				
 				
 				// else if (stripos($data['config_url'],'https://') === false){
@@ -30,10 +37,10 @@
 
 				
 
-				$validate = validate('config');
-				if (!$validate -> check($data)){
-					$this -> error( $validate -> getError());
-				}
+				// $validate = validate('config');
+				// if (!$validate -> check($data)){
+				// 	$this -> error( $validate -> getError());
+				// }
 
 
 				$add=db('config')->insert($data);
@@ -57,13 +64,20 @@
 			if (request()->isPost()){
 				$data=input('post.');
 				
+
+				if ($data['config_formtype'] =='radio' || $data['config_formtype'] =='select' || $data['config_formtype'] =='checked' ) {
+				 	# code...
+				 } {
+					$data['config_values'] = str_replace('，', ',', $data['config_values']);
+					$data['config_default'] = str_replace('，', ',', $data['config_default']);
+				}
 			
 				
 
-				$validate = validate('config');
-				if (!$validate -> check($data)){
-					$this -> error( $validate -> getError());
-				}
+				// $validate = validate('config');
+				// if (!$validate -> check($data)){
+				// 	$this -> error( $validate -> getError());
+				// }
 
 
 
@@ -82,8 +96,8 @@
 
 
 			$config_id=input('config_id');
-			$configs = db('config')->find($config_id);
-			$this->assign('configs',$configs);
+			$config = db('config')->find($config_id);
+			$this->assign('config',$config);
 			return view();
 
 		}
