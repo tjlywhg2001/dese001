@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-03 00:46:43
+Date: 2018-05-03 16:54:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -100,14 +100,16 @@ CREATE TABLE `tp_config` (
   `config_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '配置类型 1店铺配置 2商品配置',
   `config_values` varchar(60) NOT NULL COMMENT '可选值',
   `config_default` varchar(255) NOT NULL COMMENT '默认值',
+  `config_sort` int(11) DEFAULT '20' COMMENT '排序',
   PRIMARY KEY (`config_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_config
 -- ----------------------------
-INSERT INTO `tp_config` VALUES ('2', 'qerrqw', 'qewrwerq', 'checked', '1', 'asdfaf1,aefer,啊打发打发,啊打发打发,请二位,瑞特他', 'dffff');
-INSERT INTO `tp_config` VALUES ('3', 'adfaf', '34134', 'input', '1', '123,而且而,手动阀打发', '');
+INSERT INTO `tp_config` VALUES ('4', '阿道夫阿萨德方法', '下次分公司分管风格', 'checked', '1', '阿斯蒂芬,三大发放,撒旦发射点发', '阿斯蒂芬', '2');
+INSERT INTO `tp_config` VALUES ('3', 'adfaf', '34134', 'input', '1', '123,而且而,手动阀打发', '而且而', '1');
+INSERT INTO `tp_config` VALUES ('5', 'sdfgsdfg', '供货商的风格和', 'select', '0', '阿斯短发散发,的风格和地方和地方,豆腐干,我让他', '豆腐干', '20');
 
 -- ----------------------------
 -- Table structure for `tp_links`
@@ -122,8 +124,9 @@ CREATE TABLE `tp_links` (
   `links_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '类型：1文字2图片',
   `links_status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1.显示2.隐藏',
   PRIMARY KEY (`links_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_links
 -- ----------------------------
+INSERT INTO `tp_links` VALUES ('2', '噶发射点发', 'http://adfasdf', '20180503\\2cfa4aa5f2712e3180b93a9a85b26b6b.jpg', '阿朵发射点发打发打发', '0', '0');

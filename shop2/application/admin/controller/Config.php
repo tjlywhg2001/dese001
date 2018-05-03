@@ -6,10 +6,37 @@
 
 	class Config extends Controller
 	{
+
+
+		public function configlst(){
+
+			$confs = db('config');
+			$shopconflist = $confs -> where(array('config_type' => 1)) ->order('config_sort desc') ->select();
+			$commconflist = $confs -> where(array('config_type' => 2)) ->order('config_sort desc') ->select();
+			$this -> assign(['shopconflist'=>$shopconflist,'commconflist'=>$commconflist]);
+
+			return view('configlist');
+
+		}
+
+
 		public function lst(){
 
-			$configlist = db('config')->order('config_id desc')->paginate(5);
+
+			$confs =db('config');
+			if (request()->isPost()) {
+				$data=input('post.');
+				foreach ($data['config_sort'] as $k => $v) {
+					$confs -> where('config_id','=',$k) -> update(['config_sort'=>$v]);
+				}
+				$this->success('排序成功',url('lst'));
+			}
+
+
+			$configlist = $confs->order('config_sort asc')->paginate(2);
 			$this -> assign('configlist',$configlist);
+
+
 
 			return view('list');
 
