@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-03 16:54:20
+Date: 2018-05-03 22:51:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -100,16 +100,19 @@ CREATE TABLE `tp_config` (
   `config_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '配置类型 1店铺配置 2商品配置',
   `config_values` varchar(60) NOT NULL COMMENT '可选值',
   `config_default` varchar(255) NOT NULL COMMENT '默认值',
-  `config_sort` int(11) DEFAULT '20' COMMENT '排序',
+  `config_sort` int(11) NOT NULL DEFAULT '50' COMMENT '排序',
   PRIMARY KEY (`config_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_config
 -- ----------------------------
-INSERT INTO `tp_config` VALUES ('4', '阿道夫阿萨德方法', '下次分公司分管风格', 'checked', '1', '阿斯蒂芬,三大发放,撒旦发射点发', '阿斯蒂芬', '2');
-INSERT INTO `tp_config` VALUES ('3', 'adfaf', '34134', 'input', '1', '123,而且而,手动阀打发', '而且而', '1');
-INSERT INTO `tp_config` VALUES ('5', 'sdfgsdfg', '供货商的风格和', 'select', '0', '阿斯短发散发,的风格和地方和地方,豆腐干,我让他', '豆腐干', '20');
+INSERT INTO `tp_config` VALUES ('9', 'description', '店铺描述', 'textarea', '1', '', '', '1');
+INSERT INTO `tp_config` VALUES ('8', 'language', '语言', 'checked', '1', '中文,英文,日文,韩文,法文,美文', '中文', '3');
+INSERT INTO `tp_config` VALUES ('6', 'name', '店铺名称', 'input', '1', '', '', '6');
+INSERT INTO `tp_config` VALUES ('7', 'type', '类型', 'radio', '1', '企业,商城,小卖部', '企业', '5');
+INSERT INTO `tp_config` VALUES ('10', 'add', '地点', 'select', '1', '中国,英国,韩国,日本,法国,美国', '中国', '4');
+INSERT INTO `tp_config` VALUES ('11', 'picture', '店铺图片', 'file', '1', '', '', '2');
 
 -- ----------------------------
 -- Table structure for `tp_links`

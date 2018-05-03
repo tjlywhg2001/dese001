@@ -33,7 +33,7 @@
 			}
 
 
-			$configlist = $confs->order('config_sort asc')->paginate(2);
+			$configlist = $confs->order('config_sort desc')->paginate(10);
 			$this -> assign('configlist',$configlist);
 
 
@@ -49,19 +49,12 @@
 				$data=input('post.');
 
 				if ($data['config_formtype'] =='radio' || $data['config_formtype'] =='select' || $data['config_formtype'] =='checked' ) {
-				 	# code...
-				 } {
+
 					$data['config_values'] = str_replace('，', ',', $data['config_values']);
 					$data['config_default'] = str_replace('，', ',', $data['config_default']);
+
 				}
 				
-				
-				// else if (stripos($data['config_url'],'https://') === false){
-				// 	$data['config_url'] = 'https://'.$data['config_url'];
-				// } else{
-				// 	return $data['config_url'];
-				// }
-
 				
 
 				// $validate = validate('config');
