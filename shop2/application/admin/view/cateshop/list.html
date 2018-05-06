@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+	<!-- 头部 -->
+{include file='/common/top'}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                        <li class="active">用户管理</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+
+<form action="" method="post">                    
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('Category/add')}'"> <i class="fa fa-plus"></i> 添加分类
+</button>
+<button type="submit" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"> <i class="fa fa-plus"></i> 分类排序
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">栏目ID</th>
+                                <th class="text-center">栏目名称</th>
+                                <th class="text-center">栏目分类</th>
+                                <th class="text-center">栏目关键词</th>
+                                <th class="text-center">栏目描述</th>
+                                <th class="text-center">排序</th>
+                                <th class="text-center">显示导航</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        {volist name="catelist" id="category"}
+                        <tbody>
+                                <tr>
+                                <td align="center" width="5%">{$category.cate_id}</td>
+                                <td align="+center" width="12%">
+<!--                                     {if condition="$category['cate_pid'] neq 0"}
+                                     |
+                                    {/if}
+ -->                                    <?php echo str_repeat('◆',$category['lever']*4).'&nbsp;' ?>
+                                    {$category.cate_name}
+                                    
+                                </td>
+                                <td align="center" width="5%">
+                                {if condition="$category['cate_type'] eq 1"}
+                                    系统分类
+                                {elseif condition="$category['cate_type'] eq 2"}
+                                    帮助分类
+                                {elseif condition="$category['cate_type'] eq 3"}
+                                    网店帮助
+                                {elseif condition="$category['cate_type'] eq 4"}
+                                    网店信息
+                                {elseif condition="$category['cate_type'] eq 5"}
+                                    普通分类
+                                {/if}
+
+                                </td>
+                                <td align="center" width="10%">{$category.cate_keywords}</td>
+                                <td align="+center" width="42%">{$category.cate_description | cut_str=###,30}</td>
+                                <td align="center" width="4%">
+                                    <input type="text" name="cate_sort[{$category.cate_id}]" value="{$category.cate_sort}" style="width: 30px; text-align: center;" />
+                                </td>
+                               <td align="center" width="10%">
+                                
+                                {if condition="$category['cate_shownav'] neq 0"}
+                                    显示
+                                {else /}
+                                    隐藏
+                                {/if}
+
+                                </td>
+                                <td align="center" width="12%">
+                                    <a href="{:url('edit',array('cate_id'=>$category['cate_id']))}" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    {notin name="$category['cate_id']" value="1,2,3"}
+                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('cate_id'=>$category['cate_id']))}')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                    {else /}
+                                    <a href="#" disabled="disabled" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+
+                                    {/notin}
+                                </td>
+                            </tr>
+                        </tbody>
+                        {/volist}
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file='/common/footer'}    
+
+
+</body></html>

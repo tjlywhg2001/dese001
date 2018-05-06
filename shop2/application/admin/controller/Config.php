@@ -11,8 +11,71 @@
 		public function configlst(){
 
 			$confs = db('config');
+
+			if(request()->isPost()){
+				$data = input('post.');
+				$checkid2D = $confs -> field('config_ename') -> where(array('config_formtype' => 'checked')) -> select();
+
+				// dump($checkid2D);die;
+
+				$checkids = array();
+				if ($checkid2D){
+					foreach ($checkid2D as $k => $v) {
+						$checkids[] = $v['config_ename'];
+					}
+				}
+
+				// dump($checkid2D);die;
+
+				$checkadd = array();
+				foreach ($data as $k => $v) {
+					$checkadd[]=$k;
+					if (is_array($v)) {
+						$values = implode(',' , $v);
+						$confs -> where(array('config_ename' => $k)) -> update(['config_default' => $values]);
+					}
+					else{
+						$confs -> where(array('config_ename' => $k)) -> update(['config_default' => $v]);
+					}
+				}
+
+
+				// dump($data);die;
+
+
+				foreach ($checkids as $k => $v) {
+					if(!in_array($v,$checkadd)){
+						$confs -> where(array('config_ename' => $v)) -> update(['config_default' =>'']);
+					}
+				}
+
+
+				if($_FILES){
+					foreach ($_FILES as $k => $v) {
+						if($v['tmp_name']){
+							$pics = $confs -> field('config_default') -> where(array('config_ename' => $k)) -> find();
+							if ($pics['config_default']) {
+								$oldpic = imgupload.$pics['config_default'];
+								if(file_exists($oldpic)){
+									@unlink($oldpic);
+								}
+							}
+							$picscr = $this -> upload($k);
+							$confs -> where(array('config_ename' => $k )) -> update(['config_default'=>$picscr]);
+						}
+					}
+				}
+
+
+
+
+				// dump($_FILES);die;
+
+				$this ->success('配置成功!');
+			}
+
 			$shopconflist = $confs -> where(array('config_type' => 1)) ->order('config_sort desc') ->select();
-			$commconflist = $confs -> where(array('config_type' => 2)) ->order('config_sort desc') ->select();
+			$commconflist = $confs -> where(array('config_type' => 0)) ->order('config_sort desc') ->select();
 			$this -> assign(['shopconflist'=>$shopconflist,'commconflist'=>$commconflist]);
 
 			return view('configlist');
@@ -137,4 +200,29 @@
 
 
 		
+		public function upload($picscr){
+		    // 获取表单上传文件 例如上传了001.jpg
+		    $file = request()->file($picscr);
+		    
+		    // 移动到框架应用根目录/public/uploads/ 目录下
+		    if($file){
+		        $info = $file->validate(['ext'=>'jpg,png,gif'])->move(ROOT_PATH . 'public' . DS . 'static'. DS . 'uploadss');
+		        if($info){
+		            // 成功上传后 获取上传信息
+		            // 输出 jpg
+		            // echo $info->getExtension();
+		            // 输出 20160820/42a79759f284b767dfcb2a0197904287.jpg
+		            return $info->getSaveName();
+		            // 输出 42a79759f284b767dfcb2a0197904287.jpg
+		            // echo $info->getFilename(); 
+		        }else{
+		            // 上传失败获取错误信息
+		            echo $file->getError();
+		        }
+		    }
+		}
+
+
+
+
 	}

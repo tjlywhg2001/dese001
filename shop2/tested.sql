@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-03 22:51:13
+Date: 2018-05-06 21:44:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -89,6 +89,19 @@ INSERT INTO `tp_category` VALUES ('5', '配送与支付', '3', '', '', '0', '5',
 INSERT INTO `tp_category` VALUES ('11', '嘿嘿', '5', '', '', '1', '20', '0', '1');
 
 -- ----------------------------
+-- Table structure for `tp_cateshop`
+-- ----------------------------
+DROP TABLE IF EXISTS `tp_cateshop`;
+CREATE TABLE `tp_cateshop` (
+  `cateshop_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`cateshop_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tp_cateshop
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `tp_config`
 -- ----------------------------
 DROP TABLE IF EXISTS `tp_config`;
@@ -102,17 +115,25 @@ CREATE TABLE `tp_config` (
   `config_default` varchar(255) NOT NULL COMMENT '默认值',
   `config_sort` int(11) NOT NULL DEFAULT '50' COMMENT '排序',
   PRIMARY KEY (`config_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_config
 -- ----------------------------
-INSERT INTO `tp_config` VALUES ('9', 'description', '店铺描述', 'textarea', '1', '', '', '1');
-INSERT INTO `tp_config` VALUES ('8', 'language', '语言', 'checked', '1', '中文,英文,日文,韩文,法文,美文', '中文', '3');
-INSERT INTO `tp_config` VALUES ('6', 'name', '店铺名称', 'input', '1', '', '', '6');
+INSERT INTO `tp_config` VALUES ('9', 'description', '店铺描述', 'textarea', '1', '', '请描述店铺信息', '1');
+INSERT INTO `tp_config` VALUES ('8', 'language', '语言', 'checked', '1', '中文,英文,日文,韩文,法文,美文', '英文,日文', '3');
+INSERT INTO `tp_config` VALUES ('6', 'name', '店铺名称', 'input', '1', '', '请填写店铺名称', '6');
 INSERT INTO `tp_config` VALUES ('7', 'type', '类型', 'radio', '1', '企业,商城,小卖部', '企业', '5');
-INSERT INTO `tp_config` VALUES ('10', 'add', '地点', 'select', '1', '中国,英国,韩国,日本,法国,美国', '中国', '4');
-INSERT INTO `tp_config` VALUES ('11', 'picture', '店铺图片', 'file', '1', '', '', '2');
+INSERT INTO `tp_config` VALUES ('10', 'add', '地点', 'select', '1', '中国,英国,韩国,日本,法国,美国', '英国', '4');
+INSERT INTO `tp_config` VALUES ('11', 'picture', '店铺图片', 'file', '1', '', '20180506\\667a6e2dd1b0bd98a3c08d9f14a2c120.jpg', '2');
+INSERT INTO `tp_config` VALUES ('15', 'picname', '店铺图片2', 'file', '1', '', '20180506\\ea7d14757378fe7babe7711ff1f79e34.jpg', '2');
+INSERT INTO `tp_config` VALUES ('16', 'ceshi', '测试', 'checked', '1', '测试1,测试2,测试3,测试4', '测试2,测试3', '3');
+INSERT INTO `tp_config` VALUES ('17', 'shopname', '商品名称', 'input', '0', '', '请输入商品名称', '20');
+INSERT INTO `tp_config` VALUES ('18', 'shoptype', '商品类型', 'radio', '0', '服装,汽车,电子数码', '电子数码', '19');
+INSERT INTO `tp_config` VALUES ('19', 'shopadd', '商品配送地点', 'checked', '0', '中国,英国,美国,法国', '中国,英国,美国', '18');
+INSERT INTO `tp_config` VALUES ('20', 'shopdescript', '商品描述', 'textarea', '0', '', '请描述商品内容', '17');
+INSERT INTO `tp_config` VALUES ('21', 'shopconf', '商品配送方式', 'select', '0', 'ems,申通,圆通,顺丰,天天', '圆通', '16');
+INSERT INTO `tp_config` VALUES ('22', 'shoppic', '商品图片', 'file', '0', '', '20180506\\bbd1a6daa57bc1def9532df6103cfbc2.jpg', '15');
 
 -- ----------------------------
 -- Table structure for `tp_links`

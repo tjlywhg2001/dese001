@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"G:\github\dese001\shop2\public/../application/admin\view\config\list.html";i:1525433586;s:64:"G:\github\dese001\shop2\application\admin\view\common\_meta.html";i:1525566620;s:62:"G:\github\dese001\shop2\application\admin\view\common\top.html";i:1525052181;s:63:"G:\github\dese001\shop2\application\admin\view\common\left.html";i:1525433586;s:65:"G:\github\dese001\shop2\application\admin\view\common\footer.html";i:1525566627;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"C:\dese001\shop2\public/../application/admin\view\config\list.html";i:1525586113;s:57:"C:\dese001\shop2\application\admin\view\common\_meta.html";i:1525586113;s:55:"C:\dese001\shop2\application\admin\view\common\top.html";i:1525586113;s:56:"C:\dese001\shop2\application\admin\view\common\left.html";i:1525586113;s:58:"C:\dese001\shop2\application\admin\view\common\footer.html";i:1525586113;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"G:\github\dese001\shop2\public/../application/admin\view\link\list.html";i:1525276241;s:64:"G:\github\dese001\shop2\application\admin\view\common\_meta.html";i:1525566620;s:62:"G:\github\dese001\shop2\application\admin\view\common\top.html";i:1525052181;s:63:"G:\github\dese001\shop2\application\admin\view\common\left.html";i:1525433586;s:65:"G:\github\dese001\shop2\application\admin\view\common\footer.html";i:1525566627;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"C:\dese001\shop2\public/../application/admin\view\config\edit.html";i:1525586113;s:57:"C:\dese001\shop2\application\admin\view\common\_meta.html";i:1525586113;s:55:"C:\dese001\shop2\application\admin\view\common\top.html";i:1525586113;s:56:"C:\dese001\shop2\application\admin\view\common\left.html";i:1525586113;s:58:"C:\dese001\shop2\application\admin\view\common\footer.html";i:1525586113;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +30,7 @@
 </head>
 
 <body>
-	<!-- 头部 -->
+    <!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -89,12 +89,12 @@
     </div>
 </div>
 
-	<!-- /头部 -->
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-			            <!-- Page Sidebar -->
-                <div class="page-sidebar" id="sidebar">
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+                        <!-- Page Sidebar -->
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -251,7 +251,10 @@ ul>li{
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">用户管理</li>
+                                            <li>
+                            <a href="<?php echo url('config/lst'); ?>">配置管理</a>
+                        </li>
+                        <li class="active">添加配置</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -259,75 +262,124 @@ ul>li{
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('link/add'); ?>'"> <i class="fa fa-plus"></i> 添加链接
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增配置</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">链接标题</th>
-                                <th class="text-center">链接URL</th>
-                                <th class="text-center">链接LOGO</th>
-                                <th class="text-center">链接描述</th>
-                                <th class="text-center">链接类型</th>
-                                <th class="text-center">链接状态</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        
-                        <?php if(is_array($linkslist) || $linkslist instanceof \think\Collection || $linkslist instanceof \think\Paginator): $i = 0; $__LIST__ = $linkslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$links): $mod = ($i % 2 );++$i;?>
-                        <tbody>
-                                <tr>
-                                <td align="center"><?php echo $links['links_id']; ?></td>
-                                <td align="center"><?php echo $links['links_title']; ?></td>
-                                <td align="center"><?php echo $links['links_url']; ?></td>
-                                <td align="center">
-                                <?php if($links['links_logo'] != ''): ?>
-                                    <img style="height: 30px" src="/static/uploadss/<?php echo $links['links_logo']; ?>" />
-                                <?php else: ?>
-                                    暂无图片
-                                <?php endif; ?>
-                                </td>
-                                <td align="+center"><?php echo cut_str($links['links_description'] ,30); ?></td>
-                                <td align="center">
-                                
-                                <?php if($links['links_type'] != 0): ?>
-                                    文字
-                                <?php else: ?>
-                                    图片
-                                <?php endif; ?>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="config_id" value="<?php echo $config['config_id']; ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">英文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_ename" type="text" value="<?php echo $config['config_ename']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
-                                </td>
-                                <td align="center">
-                                
-                                <?php if($links['links_status'] != 0): ?>
-                                    显示
-                                <?php else: ?>
-                                    隐藏
-                                <?php endif; ?>
 
-                                </td>
-                                <td align="center">
-                                    <a href="<?php echo url('edit',array('links_id'=>$links['links_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('links_id'=>$links['links_id'])); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">中文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_cname" type="text" value="<?php echo $config['config_cname']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">表单类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="input" name="config_formtype" type="radio"  <?php if($config['config_formtype'] == 'input'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">input</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="radio" name="config_formtype" type="radio" <?php if($config['config_formtype'] == 'radio'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">radio</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="checked" name="config_formtype" type="radio" <?php if($config['config_formtype'] == 'checked'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">checked</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="textarea" name="config_formtype" type="radio" <?php if($config['config_formtype'] == 'textarea'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">textarea</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="select" name="config_formtype" type="radio" <?php if($config['config_formtype'] == 'select'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">select</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="file" name="config_formtype" type="radio" <?php if($config['config_formtype'] == 'file'): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">file</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="config_type" type="radio" <?php if($config['config_type'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">店铺配置</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="config_type" type="radio" <?php if($config['config_type'] == 0): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">商品配置</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置可选值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_values" type="text" value="<?php echo $config['config_values']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">默认值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_default" type="text" value="<?php echo $config['config_default']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div> 
-                    <?php echo $linkslist->render(); ?>
-              	</div>
             </div>
         </div>
     </div>
@@ -337,10 +389,10 @@ ul>li{
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-		</div>	
-	</div>
+        </div>  
+    </div>
 
-	    <!--Basic Scripts-->
+        <!--Basic Scripts-->
         <script src="/static/admin/style/jquery_002.js"></script>
     <script src="/static/admin/style/bootstrap.js"></script>
     <script src="/static/admin/style/jquery.js"></script>
@@ -354,7 +406,7 @@ ul>li{
     
 
 
-</script>    
-
+</script>
+    
 
 </body></html>

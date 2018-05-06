@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html";i:1525567301;s:64:"G:\github\dese001\shop2\application\admin\view\common\_meta.html";i:1525566620;s:62:"G:\github\dese001\shop2\application\admin\view\common\top.html";i:1525052181;s:63:"G:\github\dese001\shop2\application\admin\view\common\left.html";i:1525433586;s:65:"G:\github\dese001\shop2\application\admin\view\common\footer.html";i:1525566627;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:72:"C:\dese001\shop2\public/../application/admin\view\config\configlist.html";i:1525607106;s:57:"C:\dese001\shop2\application\admin\view\common\_meta.html";i:1525586113;s:55:"C:\dese001\shop2\application\admin\view\common\top.html";i:1525586113;s:56:"C:\dese001\shop2\application\admin\view\common\left.html";i:1525586113;s:58:"C:\dese001\shop2\application\admin\view\common\footer.html";i:1525586113;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -277,7 +277,7 @@ ul>li{
                         <li class=""><a href="#address-tab" data-toggle="tab" aria-expanded="true">商品配置</a></li>
                     </ul>
 
-                    <form id="accountForm" method="post" class="form-horizontal bv-form" novalidate="novalidate">
+                    <form id="accountForm" method="post" class="form-horizontal bv-form" enctype="multipart/form-data">
                         <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;">
                         </button>
                         <div class="tab-content tabs-flat">
@@ -299,10 +299,10 @@ ul>li{
                                                     foreach( $arr as $k1 => $v1 ):
                                                 ?>
                                                 <label style="padding-right: 10px;">
-                                                    <input class="inverted colored-blue" id="username" value="<?php echo $v1;?>" name="<?php echo $confs['config_ename'];?>" type="radio" <?php if($confs['config_values'] == $v1){echo 'checked="checked"';}?> >
+                                                    <input class="inverted colored-blue" id="username" value="<?php echo $v1;?>" name="<?php echo $confs['config_ename'];?>" type="radio"  <?php if($confs['config_default'] == $v1){echo 'checked="checked"';}?> >
                                                     <span class="text"><?php echo $v1; ?></span>
                                                 </label>
-                                                <?php endforeach;endif;?>
+                                                <?php endforeach; endif; ?>
                                             </div>
                                             <?php elseif ($confs['config_formtype'] == 'checked'): ?>
                                                 <!-- 复选框-->
@@ -310,11 +310,83 @@ ul>li{
                                                 <?php if($confs['config_values']):
                                                     $arr_val = explode(',' , $confs['config_values']);
                                                     $arr_def = explode(',' , $confs['config_default']);
-                                                    foreach( $arr_val as $k => $v):
+                                                    foreach( $arr_val as $k3 => $v3):
                                                 ?>
                                                 <label style="padding-right: 10px;">
-                                                    <input class="form-control colored-blue" id="username" name="<?php echo $confs['config_ename'];?>" type="checkbox" <?php if(in_array($v,$arr_def)){ echo 'checked="checked"';}?> value="<?php echo $v;?>" >
-                                                    <span class="text"><?php echo $v; ?></span>
+                                                    <input class="form-control colored-blue" id="username" name="<?php echo $confs['config_ename'];?>[]" type="checkbox" <?php if(in_array($v3,$arr_def)){ echo 'checked="checked"';}?> value="<?php echo $v3;?>" >
+                                                    <span class="text"><?php echo $v3; ?></span>
+                                                </label>
+                                                <?php endforeach;endif;?>
+                                            </div>
+
+                                            <?php elseif ($confs['config_formtype'] == 'textarea'): ?>
+                                                <!-- 文本框 -->
+                                            <textarea class="form-control" id="username" name="<?php echo $confs['config_ename'];?>" ><?php echo $confs['config_default']; ?></textarea>
+
+                                            <?php elseif ($confs['config_formtype'] == 'select'): ?>
+                                                <!-- 下拉式 -->
+                                            <select class="form-control" id="username" name="<?php echo $confs['config_ename'];?>" type="radio">
+                                }
+<!--                                                 <option value="">请选择</option>
+ -->                                                <?php if($confs['config_values']):
+                                                    $arr = explode(',' , $confs['config_values']);
+                                                    foreach ( $arr as $k2 => $v2 ):
+                                                ?>
+                                                <option <?php if($confs['config_default'] == $v2){echo 'selected="selected"';}?> value="<?php echo $v2; ?>"><?php echo $v2;?></option>
+                                                <?php endforeach; endif; ?>
+                                            </select>
+
+                                            <?php elseif ($confs['config_formtype'] == 'file'): ?>
+                                                <!-- 文件 -->
+                                            <input id="username" name="<?php echo $confs['config_ename'];?>" type="file">
+
+                                                <?php if($confs['config_default']): ?>
+                                                    <img src="/static/uploadss/<?php echo $confs['config_default']; ?>" alt="" height="40">
+                                                <?php else: ?>
+                                                    <p style="line-height: 40px">暂无图片</p>
+                                                <?php endif; endif; ?>
+
+                                        </div>
+                                    </div>
+
+
+                                <?php endforeach; ?>
+
+                            </div>
+                            <div class="tab-pane" id="address-tab">
+                                <?php foreach ($commconflist as $k => $confs): ?>
+
+
+                                    <div class="form-group">
+                                        <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $confs['config_cname']; ?></label>
+                                        <div class="col-sm-6">
+                                            <?php if ($confs['config_formtype'] == 'input'): ?>
+                                                <!-- 单行文本 -->
+                                            <input class="form-control" id="username" placeholder="" value="<?php echo $confs['config_default']; ?>" name="<?php echo $confs['config_ename'];?>" type="text">
+                                            <?php elseif ($confs['config_formtype'] == 'radio'): ?>
+                                                <!-- 单选项 -->
+                                            <div class="radio">
+                                                <?php if($confs['config_values']):
+                                                    $arr = explode(',' , $confs['config_values']);
+                                                    foreach( $arr as $k1 => $v1 ):
+                                                ?>
+                                                <label style="padding-right: 10px;">
+                                                    <input class="inverted colored-blue" id="username" value="<?php echo $v1;?>" name="<?php echo $confs['config_ename'];?>" type="radio"  <?php if($confs['config_default'] == $v1){echo 'checked="checked"';}?> >
+                                                    <span class="text"><?php echo $v1; ?></span>
+                                                </label>
+                                                <?php endforeach; endif; ?>
+                                            </div>
+                                            <?php elseif ($confs['config_formtype'] == 'checked'): ?>
+                                                <!-- 复选框-->
+                                            <div class="checkbox">
+                                                <?php if($confs['config_values']):
+                                                    $arr_val = explode(',' , $confs['config_values']);
+                                                    $arr_def = explode(',' , $confs['config_default']);
+                                                    foreach( $arr_val as $k3 => $v3):
+                                                ?>
+                                                <label style="padding-right: 10px;">
+                                                    <input class="form-control colored-blue" id="username" name="<?php echo $confs['config_ename'];?>[]" type="checkbox" <?php if(in_array($v3,$arr_def)){ echo 'checked="checked"';}?> value="<?php echo $v3;?>" >
+                                                    <span class="text"><?php echo $v3; ?></span>
                                                 </label>
                                                 <?php endforeach;endif;?>
                                             </div>
@@ -331,16 +403,16 @@ ul>li{
                                                     $arr = explode(',' , $confs['config_values']);
                                                     foreach ( $arr as $k2 => $v2 ):
                                                 ?>
-                                                <option <?php if($confs['config_values'] == $v2){echo 'selected="selected"';}?> value="<?php echo $v2; ?>"><?php echo $v2;?></option>
+                                                <option <?php if($confs['config_default'] == $v2){echo 'selected="selected"';}?> value="<?php echo $v2; ?>"><?php echo $v2;?></option>
                                                 <?php endforeach; endif; ?>
                                             </select>
 
                                             <?php elseif ($confs['config_formtype'] == 'file'): ?>
                                                 <!-- 文件 -->
-                                            <input id="username" name="config_cname" type="file">
+                                            <input id="username" name="<?php echo $confs['config_ename'];?>" type="file">
 
                                                 <?php if($confs['config_default']): ?>
-                                                    <img src="/static/uploadss/<?php echo $confs['confing_default']; ?>" alt="" height="40">
+                                                    <img src="/static/uploadss/<?php echo $confs['config_default']; ?>" alt="" height="40">
                                                 <?php else: ?>
                                                     <p style="line-height: 40px">暂无图片</p>
                                                 <?php endif; endif; ?>
@@ -351,59 +423,6 @@ ul>li{
 
                                 <?php endforeach; ?>
 
-
-
-
-
-<!--                                 <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">Full name</label>
-                                    <div class="col-lg-8">
-                                        <input class="form-control" name="fullName" data-bv-field="fullName" type="text"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="fullName"></i><i class="form-control-feedback" data-bv-field="fullName" style="display: none;"></i>
-                                    <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="fullName" data-bv-result="NOT_VALIDATED">The full name is required</small></div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">Company</label>
-                                    <div class="col-lg-8">
-                                        <input class="form-control" name="company" data-bv-field="company" type="text"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="company"></i><i class="form-control-feedback" data-bv-field="company" style="display: none;"></i>
-                                    <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="company" data-bv-result="NOT_VALIDATED">The company name is required</small></div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">Job title</label>
-                                    <div class="col-lg-8">
-                                        <input class="form-control" name="jobTitle" data-bv-field="jobTitle" type="text"><i class="form-control-feedback" data-bv-field="jobTitle" style="display: none;"></i>
-                                    </div>
-                                </div>
- -->
-                            </div>
-                            <div class="tab-pane" id="address-tab">
-                                <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">Address</label>
-                                    <div class="col-lg-8">
-                                        <input class="form-control" name="address" data-bv-field="address" type="text"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="address"></i><i class="form-control-feedback" data-bv-field="address" style="display: none;"></i>
-                                    <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="address" data-bv-result="NOT_VALIDATED">The address is required</small></div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">City</label>
-                                    <div class="col-lg-8">
-                                        <input class="form-control" name="city" data-bv-field="city" type="text"><i style="display: none;" class="form-control-feedback" data-bv-icon-for="city"></i><i class="form-control-feedback" data-bv-field="city" style="display: none;"></i>
-                                    <small style="display: none;" class="help-block" data-bv-validator="notEmpty" data-bv-for="city" data-bv-result="NOT_VALIDATED">The city is required</small></div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label class="col-lg-4 control-label">Country</label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" name="country" data-bv-field="country">
-                                            <option value="">Select a country</option>
-                                            <option value="FR">France</option>
-                                            <option value="DE">Germany</option>
-                                            <option value="IT">Italy</option>
-                                            <option value="JP">Japan</option>
-                                            <option value="RU">Russian</option>
-                                            <option value="US">United State</option>
-                                            <option value="GB">United Kingdom</option>
-                                            <option value="other">Other</option>
-                                        </select><i class="form-control-feedback" data-bv-field="country" style="display: none;"></i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="form-group">
