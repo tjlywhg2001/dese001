@@ -1,0 +1,1592 @@
+---------------------------------------------------------------
+[ 2018-05-06T08:40:14+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.085643s][吞吐率：11.68req/s] [内存消耗：2,472.63kb] [文件加载：48]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008391s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013903s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000627s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:16+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.042232s][吞吐率：23.68req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:17+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.073246s][吞吐率：13.65req/s] [内存消耗：2,366.73kb] [文件加载：44]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001927s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013786s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:18+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.034285s][吞吐率：29.17req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:38+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.077684s][吞吐率：12.87req/s] [内存消耗：2,367.18kb] [文件加载：44]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001828s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:40+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.032777s][吞吐率：30.51req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:41+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.091974s][吞吐率：10.87req/s] [内存消耗：2,306.59kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010757s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014454s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:44+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.080701s][吞吐率：12.39req/s] [内存消耗：2,190.46kb] [文件加载：42]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001705s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014505s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000457s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:46+08:00 ] 127.0.0.1 GET /index.php
+[ info ] a.com/index.php [运行时间：0.029184s][吞吐率：34.27req/s] [内存消耗：1,013.44kb] [文件加载：26]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'accept-encoding' => 'compress,gzip',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ G:\github\dese001\shop2\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:47+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.034942s][吞吐率：28.62req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:55+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.082321s][吞吐率：12.15req/s] [内存消耗：2,367.09kb] [文件加载：44]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001455s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013807s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000499s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:40:58+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.034673s][吞吐率：28.84req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:40:58+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.074742s][吞吐率：13.38req/s] [内存消耗：2,306.59kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001451s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013837s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000932s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:01+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.076840s][吞吐率：13.01req/s] [内存消耗：2,190.77kb] [文件加载：42]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007316s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014419s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000615s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:04+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.030251s][吞吐率：33.06req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:41:12+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.082224s][吞吐率：12.16req/s] [内存消耗：2,367.07kb] [文件加载：44]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001534s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.011924s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000510s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:15+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.034930s][吞吐率：28.63req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:41:16+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.073008s][吞吐率：13.70req/s] [内存消耗：2,306.59kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001541s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.012961s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000916s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:19+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.072772s][吞吐率：13.74req/s] [内存消耗：2,190.80kb] [文件加载：42]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001499s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.015643s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000469s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:22+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.045720s][吞吐率：21.87req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:41:43+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.075297s][吞吐率：13.28req/s] [内存消耗：2,367.04kb] [文件加载：44]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001383s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013979s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:46+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.032581s][吞吐率：30.69req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:41:47+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.080908s][吞吐率：12.36req/s] [内存消耗：2,306.59kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011527s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.012953s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000647s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:50+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.074730s][吞吐率：13.38req/s] [内存消耗：2,190.77kb] [文件加载：42]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001627s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.013791s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000564s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:41:54+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.036010s][吞吐率：27.77req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:11+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.081353s][吞吐率：12.29req/s] [内存消耗：2,306.59kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004424s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014168s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000659s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:14+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.034856s][吞吐率：28.69req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:15+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.071898s][吞吐率：13.91req/s] [内存消耗：2,306.85kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/configlst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001434s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014729s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000659s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:17+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.030961s][吞吐率：32.30req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:21+08:00 ] 127.0.0.1 GET /admin/link/lst.html
+[ info ] a.com/admin/link/lst.html [运行时间：0.099005s][吞吐率：10.10req/s] [内存消耗：2,440.63kb] [文件加载：48]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'link',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Link->lst[ G:\github\dese001\shop2\application\admin\controller\Link.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\link\list.html [ array (
+  0 => 'linkslist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001541s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_links` [ RunTime:0.017461s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_links` LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_links` ORDER BY `links_id` DESC LIMIT 0,5 [ RunTime:0.000580s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:24+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.033511s][吞吐率：29.84req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:24+08:00 ] 127.0.0.1 GET /admin/link/lst.html
+[ info ] a.com/admin/link/lst.html [运行时间：0.088185s][吞吐率：11.34req/s] [内存消耗：2,284.46kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'link',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Link->lst[ G:\github\dese001\shop2\application\admin\controller\Link.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\link\list.html [ array (
+  0 => 'linkslist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016512s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_links` [ RunTime:0.015103s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_links` LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_links` ORDER BY `links_id` DESC LIMIT 0,5 [ RunTime:0.000555s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:28+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.033424s][吞吐率：29.92req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:28+08:00 ] 127.0.0.1 GET /admin/arti/imglist.html
+[ info ] a.com/admin/arti/imglist.html [运行时间：0.067343s][吞吐率：14.85req/s] [内存消耗：1,577.03kb] [文件加载：37]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'imglist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/link/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->imglist[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\imglist.html [ array (
+  0 => 'imglist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:32+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.037084s][吞吐率：26.97req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:32+08:00 ] 127.0.0.1 GET /admin/arti/imglist.html
+[ info ] a.com/admin/arti/imglist.html [运行时间：0.043849s][吞吐率：22.81req/s] [内存消耗：1,419.69kb] [文件加载：35]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'imglist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/link/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->imglist[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\imglist.html [ array (
+  0 => 'imglist',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:35+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.037712s][吞吐率：26.52req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:38+08:00 ] 127.0.0.1 GET /admin/arti/lst.html
+[ info ] a.com/admin/arti/lst.html [运行时间：0.109256s][吞吐率：9.15req/s] [内存消耗：2,465.97kb] [文件加载：48]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/imglist.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->lst[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\list.html [ array (
+  0 => 'artilist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010360s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.015978s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` LIMIT 1 [ RunTime:0.004267s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`cate_name` FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` ORDER BY `ar_id` DESC LIMIT 0,5 [ RunTime:0.000757s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:40+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.033995s][吞吐率：29.42req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:41+08:00 ] 127.0.0.1 GET /admin/arti/lst.html
+[ info ] a.com/admin/arti/lst.html [运行时间：0.075951s][吞吐率：13.17req/s] [内存消耗：2,306.95kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/imglist.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->lst[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\list.html [ array (
+  0 => 'artilist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001572s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.014123s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` LIMIT 1 [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`cate_name` FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` ORDER BY `ar_id` DESC LIMIT 0,5 [ RunTime:0.000777s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:45+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.032259s][吞吐率：31.00req/s] [内存消耗：1,051.63kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:42:46+08:00 ] 127.0.0.1 GET /admin/arti/add.html
+[ info ] a.com/admin/arti/add.html [运行时间：0.091609s][吞吐率：10.92req/s] [内存消耗：2,385.94kb] [文件加载：45]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->add[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\add.html [ array (
+  0 => 'artilist',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001422s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.014905s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` LIMIT 1 [ RunTime:0.000482s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:42:49+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.030937s][吞吐率：32.32req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:43:04+08:00 ] 127.0.0.1 POST /admin/arti/add.html
+[ info ] a.com/admin/arti/add.html [运行时间：0.090953s][吞吐率：10.99req/s] [内存消耗：2,391.55kb] [文件加载：45]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/add.html',
+  'content-type' => 'multipart/form-data; boundary=---------------------------4827988827128',
+  'content-length' => '1285',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'ar_cateid' => '1',
+  'ar_title' => '',
+  'ar_keywords' => '',
+  'ar_description' => '',
+  'ar_autor' => '',
+  'ar_email' => '',
+  'ar_linkurl' => '',
+  'ar_content' => '',
+  'ar_top' => '0',
+  'ar_status' => '1',
+  'ar_addtime' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Arti->add[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:43:07+08:00 ] 127.0.0.1 GET /admin/arti/add.html
+[ info ] a.com/admin/arti/add.html [运行时间：0.081892s][吞吐率：12.21req/s] [内存消耗：2,219.06kb] [文件加载：43]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Arti->add[ G:\github\dese001\shop2\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\arti\add.html [ array (
+  0 => 'artilist',
+  1 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014083s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.014028s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` LIMIT 1 [ RunTime:0.000506s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:43:12+08:00 ] 127.0.0.1 GET /admin/config/lst.html
+[ info ] a.com/admin/config/lst.html [运行时间：0.076043s][吞吐率：13.15req/s] [内存消耗：2,306.60kb] [文件加载：46]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/arti/add.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->lst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\list.html [ array (
+  0 => 'configlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001626s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.015599s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_config` LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` ORDER BY `config_sort` DESC LIMIT 0,10 [ RunTime:0.000635s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:43:15+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.031514s][吞吐率：31.73req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-06T08:43:18+08:00 ] 127.0.0.1 GET /admin/config/configlst.html
+[ info ] a.com/admin/config/configlst.html [运行时间：0.082307s][吞吐率：12.15req/s] [内存消耗：2,190.77kb] [文件加载：42]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'config',
+    2 => 'configlst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.com/admin/config/lst.html',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Config->configlst[ G:\github\dese001\shop2\application\admin\controller\Config.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] G:\github\dese001\shop2\public/../application/admin\view\config\configlist.html [ array (
+  0 => 'shopconflist',
+  1 => 'commconflist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005197s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.014150s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 1 ORDER BY `config_sort` DESC [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` WHERE  `config_type` = 2 ORDER BY `config_sort` DESC [ RunTime:0.000555s ]
+---------------------------------------------------------------
+[ 2018-05-06T08:43:22+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] a.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.031802s][吞吐率：31.44req/s] [内存消耗：1,051.48kb] [文件加载：28]
+[ info ] [ LANG ] G:\github\dese001\shop2\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://a.com/static/admin/style/font-awesome.css',
+  'cookie' => 'pgv_pvi=5882636288; pgv_si=s4328197120',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
