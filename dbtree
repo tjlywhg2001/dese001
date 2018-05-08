@@ -1,0 +1,29 @@
+分类  cates
+
+cates_id cates_name cates_img cates_sort cates_pid
+
+
+
+商品类型  type
+
+type_id	type_name
+
+
+
+商品属性  attr
+
+attr_id  attr_name  attr_type  attr_values  type_id
+
+
+
+商品表   commodity
+
+commodity_id  commodity_name  commodity_num  commodity_og_thumb  commodity_sm_thumb
+
+commodity_big_thumb  commodity_market_price  commodity_shop_price
+
+commodity_on_sale  cates_id  brand_id  commodity_type_id  commodity_desc  commodity_weight
+
+commodity_weight_unit
+
+
