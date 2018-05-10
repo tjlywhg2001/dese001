@@ -25,7 +25,7 @@
 					}
 				}
 
-				// dump($checkid2D);die;
+				// dump($checkids);die;
 
 				$checkadd = array();
 				foreach ($data as $k => $v) {

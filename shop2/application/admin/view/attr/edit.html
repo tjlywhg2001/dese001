@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+    <!-- 头部 -->
+{include file='/common/top'}
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+                        <!-- Page Sidebar -->
+        {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                                            <li>
+                            <a href="{:url('attr/lst')}">商品属性管理</a>
+                        </li>
+                        <li class="active">添加商品属性</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">添加商品属性</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="attr_id" value="{$attr.attr_id}">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属类型</label>
+                            <div class="col-sm-6">
+                                <select name="type_id">
+                                    {volist name="attrlist" id="type"}
+                                    <?php
+                                     foreach ($type as $k => $v): 
+                                        ?>
+                                        <?php if(!is_int($v)): ?>
+                                        <option value="<?php echo $type['type_id'] ?>"><?php echo $v?></option>
+                                    <?php endif;endforeach; ?>
+                                    {/volist}
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品属性名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="attr_name" type="text" required="" value="{$attr.attr_name}">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">分类类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="attr_type" type="radio" checked="checked">
+                                        <span class="text">单选</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="2" name="attr_type" type="radio">
+                                        <span class="text">唯一</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品属性值列表</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" placeholder="" name="attr_values" type="text"></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>  
+    </div>
+
+        <!--Basic Scripts-->
+    {include file='/common/footer'}
+    
+
+</body></html>

@@ -20,9 +20,9 @@
                             <a href="{:url('Index/index')}">系统</a>
                         </li>
                                             <li>
-                            <a href="{:url('Brand/lst')}">品牌管理</a>
+                            <a href="{:url('attr/lst')}">商品属性管理</a>
                         </li>
-                        <li class="active">添加品牌</li>
+                        <li class="active">添加商品属性</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -34,63 +34,66 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增品牌</span>
+                <span class="widget-caption">添加商品属性</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属类型</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_name" type="text">
+                                <select name="type_id">
+                                    <option value="">请选择</option>
+                                    {volist name="attrlist" id="type"}
+                                    <?php
+                                     foreach ($type as $k => $v): 
+                                        ?>
+                                        <?php if(!is_int($v)): ?>
+                                        <option value="<?php echo $type['type_id'] ?>"><?php echo $v?></option>
+                                    <?php endif;endforeach; ?>
+                                    {/volist}
+                                </select>
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌地址</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品属性名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_url" type="text">
+                                <input class="form-control" id="username" placeholder="" name="attr_name" type="text" required="">
                             </div>
-                            <p class="help-block col-sm-4 red"></p>
+                            <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌描述</label>
-                            <div class="col-sm-6">
-                                <textarea class="form-control" id="username" placeholder="" name="brand_description" type="text"></textarea>
-                            </div>
-                            <p class="help-block col-sm-4 red"></p>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
-                            <div class="col-sm-6">
-                                <input class="" id="username" name="brand_img" type="file">
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌状态</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">分类类型</label>
                             <div class="col-sm-6">
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="1" name="brand_status" type="radio">
-                                        <span class="text">显示</span>
+                                        <input class="inverted colored-blue" value="1" name="attr_type" type="radio" checked="checked">
+                                        <span class="text">单选</span>
                                     </label>
                                 </div>
-                                <div class="radio" style="float:left">
+                                <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="0" name="brand_status" type="radio">
-                                        <span class="text">隐藏</span>
+                                        <input class="inverted colored-blue" value="2" name="attr_type" type="radio">
+                                        <span class="text">唯一</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品属性值列表</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" placeholder="" name="attr_values" type="text"></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">

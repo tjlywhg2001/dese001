@@ -19,15 +19,15 @@
                         <li>
                             <a href="{:url('Index/index')}">系统</a>
                         </li>
-                        <li class="active">品牌管理</li>
+                        <li class="active">商品类型管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('brand/add')}'"> <i class="fa fa-plus"></i> 添加品牌
+
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('attr/add')}'"> <i class="fa fa-plus"></i> 添加商品属性
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -37,44 +37,37 @@
                     <table class="table table-bordered table-hover">
                         <thead class="">
                             <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">品牌名称</th>
-                                <th class="text-center">品牌地址</th>
-                                <th class="text-center">品牌描述</th>
-                                <th class="text-center">品牌logo</th>
-                                <th class="text-center">状态</th>
+                                <th class="text-center">商品属性ID</th>
+                                <th class="text-center">商品属性名称</th>
+                                <th class="text-center">商品属性类型</th>
+                                <th class="text-center">所属类型</th>
+                                <th class="text-center">商品属性值列表</th>
                                 <th class="text-center">操作</th>
                             </tr>
                         </thead>
                         
-                        {volist name="brandlist" id="brand"}
+                        {volist name="attrlist" id="attr"}
                         <tbody>
                                 <tr>
-                                <td align="center">{$brand.brand_id}</td>
-                                <td align="center">{$brand.brand_name}</td>
-                                <td align="center">{$brand.brand_url}</td>
-                                <td align="+center">{$brand.brand_description | cut_str=###,30}</td>
-                                <td align="center">
-                                {if condition="$brand['brand_img'] neq ''"}
-                                    <img style="height: 30px" src="__upload__/{$brand.brand_img}" />
+                                <td align="center" width="5%">{$attr.attr_id}</td>
+                                <td align="+center" width="12%">
+                                    {$attr.attr_name}
+                                    
+                                </td>
+                                <td align="center" width="5%">
+                                {if condition="$attr['attr_type'] eq 1"}
+                                    单选
                                 {else /}
-                                    暂无图片
+                                    唯一
                                 {/if}
                                 </td>
-                                <td align="center">
-                                
-                                {if condition="$brand['brand_status'] neq 0"}
-                                    显示
-                                {else /}
-                                    隐藏
-                                {/if}
-
-                                </td>
-                                <td align="center">
-                                    <a href="{:url('edit',array('brand_id'=>$brand['brand_id']))}" class="btn btn-primary btn-sm shiny">
+                                <td align="center" width="10%">{$attr.type_id}</td>
+                                <td align="center" width="10%">{$attr.attr_values}</td>
+                                <td align="center" width="12%">
+                                    <a href="{:url('edit',array('attr_id'=>$attr['attr_id']))}" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('brand_id'=>$brand['brand_id']))}')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('attr_id'=>$attr['attr_id']))}')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -83,14 +76,11 @@
                         {/volist}
                     </table>
                 </div>
-                <div> 
-                    {$brandlist->render()}
-              	</div>
+
             </div>
         </div>
     </div>
 </div>
-
                 </div>
                 <!-- /Page Body -->
             </div>
