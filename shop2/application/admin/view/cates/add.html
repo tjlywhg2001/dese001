@@ -20,9 +20,9 @@
                             <a href="{:url('Index/index')}">系统</a>
                         </li>
                                             <li>
-                            <a href="{:url('Brand/lst')}">用户管理</a>
+                            <a href="{:url('cates/lst')}">商品分类管理</a>
                         </li>
-                        <li class="active">添加用户</li>
+                        <li class="active">添加商品分类</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -34,59 +34,62 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增品牌</span>
+                <span class="widget-caption">添加商品分类</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_name" type="text">
+                                <select name="cates_pid">
+                                    <option value="">顶级分类</option>
+                                    {volist name="cateslist" id="cates"}
+                                    <option value="{$cates.cates_id}">
+                                    
+                                    {if condition="$cates['cates_pid'] neq 0"}
+                                     |
+                                    {/if}
+                                        <?php echo str_repeat('-',$cates['lever']*5) ?>
+                                        {$cates.cates_name}
+                                    </option>
+                                    {/volist}
+                                </select>
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌地址</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="brand_url" type="text">
+                                <input class="form-control" id="username" placeholder="" name="cates_name" type="text" required="">
                             </div>
-                            <p class="help-block col-sm-4 red"></p>
+                            <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌描述</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类图片</label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="username" placeholder="" name="brand_description" type="text"></textarea>
-                            </div>
-                            <p class="help-block col-sm-4 red"></p>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
-                            <div class="col-sm-6">
-                                <input class="" id="username" name="brand_img" type="file">
+                                <input class="" id="username" name="cates_img" type="file">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌状态</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">显示导航</label>
                             <div class="col-sm-6">
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="1" name="brand_status" type="radio">
-                                        <span class="text">显示</span>
+                                        <input class="inverted colored-blue" checked="checked" value="1" name="cates_shownav" type="radio">
+                                        <span class="text">是</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left">
                                     <label>
-                                        <input class="inverted colored-blue" value="0" name="brand_status" type="radio">
-                                        <span class="text">隐藏</span>
+                                        <input class="inverted colored-blue" value="0" name="cates_shownav" type="radio">
+                                        <span class="text">否</span>
                                     </label>
                                 </div>
                             </div>

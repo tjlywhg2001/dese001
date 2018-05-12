@@ -61,7 +61,7 @@
                                     唯一
                                 {/if}
                                 </td>
-                                <td align="center" width="10%">{$attr.type_id}</td>
+                                <td align="center" width="10%">{$attr.type_name}</td>
                                 <td align="center" width="10%">{$attr.attr_values}</td>
                                 <td align="center" width="12%">
                                     <a href="{:url('edit',array('attr_id'=>$attr['attr_id']))}" class="btn btn-primary btn-sm shiny">
@@ -76,7 +76,9 @@
                         {/volist}
                     </table>
                 </div>
-
+                <div>
+                    {$attrlist->render()}
+                </div>
             </div>
         </div>
     </div>

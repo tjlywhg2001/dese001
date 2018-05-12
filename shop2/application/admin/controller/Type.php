@@ -3,7 +3,6 @@
 
 	use think\Controller;
 
-
 	class Type extends Controller
 	{
 		public function lst(){

@@ -22,7 +22,7 @@
                                             <li>
                             <a href="{:url('attr/lst')}">商品属性管理</a>
                         </li>
-                        <li class="active">添加商品属性</li>
+                        <li class="active">修改商品属性</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -44,12 +44,12 @@
                             <label for="username" class="col-sm-2 control-label no-padding-right">所属类型</label>
                             <div class="col-sm-6">
                                 <select name="type_id">
-                                    {volist name="attrlist" id="type"}
+                                    {volist name="attrlist" id="type";}
                                     <?php
                                      foreach ($type as $k => $v): 
                                         ?>
                                         <?php if(!is_int($v)): ?>
-                                        <option value="<?php echo $type['type_id'] ?>"><?php echo $v?></option>
+                                        <option {if condition="$type['type_id'] eq $attr['type_id']"} selected="selected" {/if} value="<?php echo $type['type_id']; ?>"><?php echo $v;?></option>
                                     <?php endif;endforeach; ?>
                                     {/volist}
                                 </select>
@@ -61,7 +61,7 @@
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">商品属性名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="attr_name" type="text" required="" value="{$attr.attr_name}">
+                                <input class="form-control" id="username" placeholder="" name="attr_name" type="text" required="" value="{$attr['attr_name']}">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
@@ -72,13 +72,13 @@
                             <div class="col-sm-6">
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="1" name="attr_type" type="radio" checked="checked">
+                                        <input class="inverted colored-blue" value="1" name="attr_type" type="radio" {if condition="$attr['attr_type'] eq 1"} checked="checked" {/if}>
                                         <span class="text">单选</span>
                                     </label>
                                 </div>
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" value="2" name="attr_type" type="radio">
+                                        <input class="inverted colored-blue" value="2" name="attr_type" type="radio" {if condition="$attr['attr_type'] eq 2"} checked="checked" {/if}>
                                         <span class="text">唯一</span>
                                     </label>
                                 </div>
@@ -89,7 +89,7 @@
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">商品属性值列表</label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="username" placeholder="" name="attr_values" type="text"></textarea>
+                                <textarea class="form-control" id="username" placeholder="" name="attr_values" type="text">{$attr['attr_values']}</textarea>
                             </div>
                             <p class="help-block col-sm-4 red"></p>
                         </div>

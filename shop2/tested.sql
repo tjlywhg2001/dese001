@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-05-10 17:57:50
+Date: 2018-05-12 18:02:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -53,17 +53,19 @@ CREATE TABLE `tp_attr` (
   `attr_values` varchar(500) NOT NULL COMMENT '商品属性值',
   `type_id` smallint(6) NOT NULL COMMENT '商品类型',
   PRIMARY KEY (`attr_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_attr
 -- ----------------------------
-INSERT INTO `tp_attr` VALUES ('6', '阿德法地方', '1', '阿德法地方', '2');
-INSERT INTO `tp_attr` VALUES ('7', '衣长', '1', '35，36，37，38，39', '0');
-INSERT INTO `tp_attr` VALUES ('8', '肩宽', '1', '38，39，40，41，42，43', '0');
-INSERT INTO `tp_attr` VALUES ('9', '胸围', '1', '85，90，95，100，105，110，115，120', '0');
-INSERT INTO `tp_attr` VALUES ('10', '袖长', '1', '75，80，85，90，95', '3');
-INSERT INTO `tp_attr` VALUES ('11', '面料', '1', '全棉，丝绸，塑料', '3');
+INSERT INTO `tp_attr` VALUES ('6', '阿德法地方', '1', '阿德法地方,打发斯蒂芬,阿斯蒂芬,阿斯短发散发去', '1');
+INSERT INTO `tp_attr` VALUES ('7', '衣长', '1', '35,36,37,38,39', '3');
+INSERT INTO `tp_attr` VALUES ('8', '肩宽', '1', '38,39,40,41,42,43', '3');
+INSERT INTO `tp_attr` VALUES ('9', '胸围', '1', '85,90,95,100,105,110,115,120', '3');
+INSERT INTO `tp_attr` VALUES ('10', '袖长', '1', '75,80,85,90,95', '3');
+INSERT INTO `tp_attr` VALUES ('11', '面料', '1', '全棉,丝绸,塑料', '3');
+INSERT INTO `tp_attr` VALUES ('12', '领位', '1', '35,36,37,38,39', '3');
+INSERT INTO `tp_attr` VALUES ('14', '性别', '2', '女', '3');
 
 -- ----------------------------
 -- Table structure for `tp_brand`
@@ -119,14 +121,17 @@ CREATE TABLE `tp_cates` (
   `cates_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `cates_name` varchar(100) NOT NULL COMMENT '商品分类',
   `cates_img` varchar(100) NOT NULL COMMENT '商品图片',
+  `cates_shownav` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示1显示0隐藏',
   `cates_sort` int(10) NOT NULL DEFAULT '20' COMMENT '商品分类排序',
   `cates_pid` int(11) NOT NULL COMMENT '商品分类级别',
   PRIMARY KEY (`cates_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tp_cates
 -- ----------------------------
+INSERT INTO `tp_cates` VALUES ('1', '一级nav--1', '', '1', '20', '0');
+INSERT INTO `tp_cates` VALUES ('2', '二级nav--1-1', '', '1', '20', '1');
 
 -- ----------------------------
 -- Table structure for `tp_cateshop`
